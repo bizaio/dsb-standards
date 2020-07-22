@@ -1,14 +1,16 @@
 {
-  "name": "consumer-data-standards",
+  "name": "dsb-standards",
   "version": "1.0.0",
   "dependencies": {
-    "@redocly/openapi-cli": "^0.12.9",
+    "@redocly/openapi-cli": "^0.12.16",
+    "deploy-to-gh-pages": "^1.3.7",
     "redoc-cli": "^0.9.8"
   },
   "private": true,
   "scripts": {
     "start": "openapi preview-docs",
     "build": "openapi bundle -o dist",
+    "deploy": "npm run build && deploy-to-gh-pages --update web_deploy",
     "test": "openapi validate"
   }
 }
