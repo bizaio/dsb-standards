@@ -20,8 +20,8 @@ get:
       $ref: ../components/responses/GetTransactions.yaml
   summary: Get Transactions For Account
   tags:
-    - Transactions
     - Banking
+    - Transactions
   security:
     - CDRAuth: ['bank:transactions:read']
   x-version: '1'

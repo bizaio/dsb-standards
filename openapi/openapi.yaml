@@ -4,12 +4,9 @@ info:
     name: Biza.io
     url: 'https://biza.io/'
   description: >-
-    This specification mirrors the definitions of the Australian Consumer Data Standards and is intended to deliver the Standards in OpenAPI 3 format with additional data specifications.
-
-    The source for this Redocs is available at [https://github.com/bizaio/dsb-standards](https://github.com/bizaio/dsb-standards).
-
-    A downgraded Swagger 2 version of this document can be [downloaded here](http://bizaio.github.io/dsb-standards/swagger2.json).
-
+    <p>This specification mirrors the definitions of the Australian Consumer Data Standards and is intended to deliver the Standards in OpenAPI 3 format with additional data specifications.</p>
+    <p>The source for this Redocs is available at [https://github.com/bizaio/dsb-standards](https://github.com/bizaio/dsb-standards).</p>
+    <p>A downgraded Swagger 2 version of this document can be [downloaded here](http://bizaio.github.io/dsb-standards/swagger2.json).</p>
   license:
     name: MIT License
     url: 'https://opensource.org/licenses/MIT'
@@ -62,14 +59,16 @@ tags:
     description: "Admin APIs"
   - name: Accounts
     description: "Accounts Related APIs"
+  - name: Balances
+    description: "Account Balance Related APIs"
+  - name: Banking
+    description: "Banking APIs"
   - name: Common
     description: "Common APIs"
   - name: Customer
     description: "Customer APIs"
   - name: Discovery
     description: "Discovery APIs"
-  - name: Banking
-    description: "Banking APIs"
   - name: Direct Debits
     description: "Direct Debits APIs"
   - name: Metrics
@@ -82,6 +81,8 @@ tags:
     description: "Register APIs"
   - name: Scheduled Payments
     description: "Scheduled Payments APIs"
+  - name: Transactions
+    description: "Transactions APIs"
 x-tagGroups:
   - name: "Banking APIs"
     tags: ["Accounts", "Direct Debits", "Payees", "Banking Products", "Scheduled Payments"]

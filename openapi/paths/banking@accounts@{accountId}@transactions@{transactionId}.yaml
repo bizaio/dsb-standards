@@ -15,8 +15,8 @@ get:
       $ref: ../components/responses/GetTransactionDetail.yaml
   summary: Get Transaction Detail
   tags:
-    - Transactions
     - Banking
+    - Transactions
   security:
     - CDRAuth: ['bank:transactions:read']
   x-version: '1'
