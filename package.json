@@ -12,7 +12,7 @@
   "scripts": {
     "start": "openapi preview-docs",
     "build": "openapi bundle --ext json -o dist && openapi bundle --ext yaml -o dist && api-spec-converter dist/openapi.json --from=openapi_3 --to=swagger_2 > dist/swagger2.json",
-    "deploy": "npm run build && cp dist/openapi.* web && deploy-to-gh-pages --update web",
+    "deploy": "npm run build && cp dist/* web && deploy-to-gh-pages --update web",
     "test": "openapi validate"
   }
 }
