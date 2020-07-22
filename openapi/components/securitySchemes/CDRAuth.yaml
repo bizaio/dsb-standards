@@ -4,7 +4,7 @@ flows:
     authorizationUrl: https://idp.holder.cdr/authorize
     tokenUrl: https://idp.holder.cdr/token
     scopes:
-      "bank:accounts:basic:read": Basic Bank Account Data
+      "bank:accounts.basic:read": Basic Bank Account Data
       "bank:accounts.detail:read": Detailed Bank Account Data
       "bank:transactions:read": Bank Transaction Data
       "bank:payees:read": Bank Payee Data
