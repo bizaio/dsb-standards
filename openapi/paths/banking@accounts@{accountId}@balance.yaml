@@ -14,7 +14,7 @@ get:
       $ref: ../components/responses/GetBalance.yaml
   summary: Get Account Balance
   tags:
-    - Accounts
+    - Balances
     - Banking
   security:
     - CDRAuth: ['bank:accounts.basic:read']
