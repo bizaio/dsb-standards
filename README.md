@@ -4,7 +4,7 @@ This repository contains a [Redoc](https://github.com/Redocly/redoc) implementat
 
 ## Current Status
 
-We believe this documentation is currently up to date with *1.3.0* of the Standards with respect to the payloads.
+We believe this documentation is currently up to date with **1.3.0** of the Standards with respect to the payloads.
 
 We have not currently transferred auxillary documentation outside of payloads.
 
