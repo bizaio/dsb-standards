@@ -8,12 +8,14 @@ properties:
           present if the status property is PARTIAL_FAILURE or UNAVAILABLE
         type: string
         x-cds-type: DateTimeString
+        format: date-time
       expectedResolutionTime:
         description: >-
           The date and time that full service is expected to resume (if known).
           Should not be present if the status property has a value of OK.
         type: string
         x-cds-type: DateTimeString
+        format: date-time
       explanation:
         description: >-
           Provides an explanation of the current outage that can be displayed to an
@@ -35,6 +37,7 @@ properties:
         description: The date and time that this status was last updated by the Data Holder.
         type: string
         x-cds-type: DateTimeString
+        format: date-time
     required:
       - status
       - updateTime

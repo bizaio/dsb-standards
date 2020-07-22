@@ -9,6 +9,7 @@ properties:
     description: Link to a web page with more information on this eligibility criteria
     type: string
     x-cds-type: URIString
+    format: uri
   additionalValue:
     description: >-
       Generic field containing additional information relevant to the

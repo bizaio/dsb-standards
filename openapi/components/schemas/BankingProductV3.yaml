@@ -5,6 +5,7 @@ properties:
     description: A link to an application web page where this product can be applied for.
     type: string
     x-cds-type: URIString
+    format: uri
   brand:
     description: >-
       A label of the brand for the product. Able to be used for filtering. For
@@ -28,12 +29,14 @@ properties:
       regime before they are available for customers to originate
     type: string
     x-cds-type: DateTimeString
+    format: date-time
   effectiveTo:
     description: >-
       The date and time at which this product will be retired and will no longer
       be offered.  Used to enable the managed deprecation of products
     type: string
     x-cds-type: DateTimeString
+    format: date-time
   isTailored:
     description: >-
       Indicates whether the product is specifically tailored to a circumstance. 

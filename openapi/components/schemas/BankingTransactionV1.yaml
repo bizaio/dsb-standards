@@ -36,6 +36,7 @@ properties:
       available
     type: string
     x-cds-type: DateTimeString
+    format: date-time
   isDetailAvailable:
     description: >-
       True if extended information is available using the transaction detail end
@@ -55,6 +56,7 @@ properties:
       standard statement
     type: string
     x-cds-type: DateTimeString
+    format: date-time
   reference:
     description: >-
       The reference for the transaction provided by the originating institution.
@@ -96,6 +98,7 @@ properties:
       case of a debit transaction entry
     type: string
     x-cds-type: DateTimeString
+    format: date-time
 required:
   - accountId
   - amount

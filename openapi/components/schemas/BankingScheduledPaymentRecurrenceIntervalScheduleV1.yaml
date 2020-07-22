@@ -10,6 +10,7 @@ properties:
       field is present the payments will continue indefinitely
     type: string
     x-cds-type: DateString
+    format: date
   intervals:
     description: >-
       An array of interval objects defining the payment schedule.  Each entry in

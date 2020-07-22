@@ -8,6 +8,7 @@ properties:
       benefits
     type: string
     x-cds-type: URIString
+    format: uri
   description:
     description: Description of the bundle
     type: string

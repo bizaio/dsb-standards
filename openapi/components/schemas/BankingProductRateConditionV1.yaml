@@ -7,4 +7,5 @@ properties:
     description: Link to a web page with more information on this condition
     type: string
     x-cds-type: URIString
+    format: uri
 type: object

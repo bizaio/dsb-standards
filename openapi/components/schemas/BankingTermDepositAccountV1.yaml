@@ -3,6 +3,7 @@ properties:
     description: The lodgement date of the original deposit
     type: string
     x-cds-type: DateString
+    format: date
   maturityAmount:
     description: >-
       Amount to be paid upon maturity. If absent it implies the amount to paid
@@ -17,6 +18,7 @@ properties:
     description: Maturity date for the term deposit
     type: string
     x-cds-type: DateString
+    format: date
   maturityInstructions:
     description: Current instructions on action to be taken at maturity
     enum:

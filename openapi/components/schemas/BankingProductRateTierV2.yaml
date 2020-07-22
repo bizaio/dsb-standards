@@ -7,6 +7,7 @@ properties:
     description: Link to a web page with more information on this rate tier
     type: string
     x-cds-type: URIString
+    format: uri
   applicabilityConditions:
     $ref: ./BankingProductRateConditionV1.yaml
   maximumValue:

@@ -21,6 +21,7 @@ properties:
     description: Date and time that the outage is scheduled to begin
     type: string
     x-cds-type: DateTimeString
+    format: date-time
 required:
   - duration
   - explanation

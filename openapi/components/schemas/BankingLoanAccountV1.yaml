@@ -3,6 +3,7 @@ properties:
     description: Date that the loan is due to be repaid in full
     type: string
     x-cds-type: DateString
+    format: date
   maxRedraw:
     description: >-
       Maximum amount of funds that can be redrawn. If not present redraw is not
@@ -33,6 +34,7 @@ properties:
     description: Next date that an instalment is required
     type: string
     x-cds-type: DateString
+    format: date
   offsetAccountEnabled:
     description: >-
       Set to true if one or more offset accounts are configured for this loan
@@ -63,6 +65,7 @@ properties:
     description: Optional original start date for the loan
     type: string
     x-cds-type: DateString
+    format: date
   repaymentFrequency:
     description: >-
       The expected or required repayment frequency. Formatted according to [ISO
