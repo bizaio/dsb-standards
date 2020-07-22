@@ -10,7 +10,7 @@
   "scripts": {
     "start": "openapi preview-docs",
     "build": "openapi bundle -o dist",
-    "deploy": "npm run build && deploy-to-gh-pages --update web_deploy",
+    "deploy": "npm run build && cp dist/openapi.yaml web && deploy-to-gh-pages --update web",
     "test": "openapi validate"
   }
 }
