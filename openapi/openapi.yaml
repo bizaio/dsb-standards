@@ -78,8 +78,6 @@ tags:
     description: "Products"
   - name: Register
     description: "Register APIs"
-  - name: Banking Products
-    description: "Banking Products"
   - name: Scheduled Payments
     description: "Scheduled Payments APIs"
 x-tagGroups:
