@@ -1,0 +1,9 @@
+description: >-
+  The time when the customer last logged in to the data recipient. Required for
+  all resource calls (customer present and unattended). Not to be included for
+  unauthenticated calls.
+in: header
+name: x-fapi-auth-date
+required: false
+schema:
+  type: string

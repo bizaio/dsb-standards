@@ -1,0 +1,20 @@
+properties:
+  data:
+    type: object
+    properties:
+      directDebitAuthorisations:
+        description: The list of authorisations returned
+        items:
+          $ref: ./BankingDirectDebitV1.yaml
+        type: array
+    required:
+      - directDebitAuthorisations
+  links:
+    $ref: ./LinksPaginatedV1.yaml
+  meta:
+    $ref: ./MetaPaginatedV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

@@ -1,0 +1,13 @@
+type: oauth2
+flows:
+  authorizationCode:
+    authorizationUrl: https://idp.holder.cdr/authorize
+    tokenUrl: https://idp.holder.cdr/token
+    scopes:
+      "bank:accounts:basic:read": Basic Bank Account Data
+      "bank:accounts.detail:read": Detailed Bank Account Data
+      "bank:transactions:read": Bank Transaction Data
+      "bank:payees:read": Bank Payee Data
+      "bank:regular_payments:read": Bank Regular Payments
+      "common:customer.basic:read": Basic Customer Data
+      "common:customer.detail:read": Detailed Customer Data

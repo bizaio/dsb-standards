@@ -1,0 +1,20 @@
+properties:
+  data:
+    type: object
+    properties:
+      scheduledPayments:
+        description: The list of scheduled payments to return
+        items:
+          $ref: ./BankingScheduledPaymentV1.yaml
+        type: array
+    required:
+      - scheduledPayments
+  links:
+    $ref: ./LinksPaginatedV1.yaml
+  meta:
+    $ref: ./MetaPaginatedV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

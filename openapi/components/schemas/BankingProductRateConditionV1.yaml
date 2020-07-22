@@ -1,0 +1,10 @@
+description: Defines a condition for the applicability of a tiered rate
+properties:
+  additionalInfo:
+    description: Display text providing more information on the condition
+    type: string
+  additionalInfoUri:
+    description: Link to a web page with more information on this condition
+    type: string
+    x-cds-type: URIString
+type: object

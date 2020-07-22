@@ -1,0 +1,98 @@
+allOf:
+  - $ref: ./BankingAccountV1.yaml
+  - properties:
+      accountNumber:
+        description: >-
+          The unmasked account number for the account. Should not be supplied if
+          the account number is a PAN requiring PCI compliance. Is expected to
+          be formatted as digits only with leading zeros included and no
+          punctuation or spaces
+        type: string
+      addresses:
+        description: The addresses for the account to be used for correspondence
+        items:
+          $ref: ./CommonPhysicalAddressV1.yaml
+        type: array
+      bsb:
+        description: >-
+          The unmasked BSB for the account. Is expected to be formatted as
+          digits only with leading zeros included and no punctuation or spaces
+        type: string
+      bundleName:
+        description: >-
+          Optional field to indicate if this account is part of a bundle that is
+          providing additional benefit for to the customer
+        type: string
+      creditCard:
+        $ref: ./BankingCreditCardAccountV1.yaml
+      depositRate:
+        description: >-
+          current rate to calculate interest earned being applied to deposit
+          balances as it stands at the time of the API call
+        type: string
+        x-cds-type: RateString
+      depositRates:
+        description: >-
+          Fully described deposit rates for this account based on the equivalent
+          structure in Product Reference
+        items:
+          $ref: ./BankingProductDepositRateV1.yaml
+        type: array
+      features:
+        description: >-
+          Array of features of the account based on the equivalent structure in
+          Product Reference with the following additional field
+        items:
+          allOf:
+            - $ref: ./BankingProductFeatureV1.yaml
+            - properties:
+                isActivated:
+                  default: true
+                  description: >-
+                    True if the feature is already activated and false if the
+                    feature is available for activation. Defaults to true if
+                    absent. (note this is an additional field appended to the
+                    feature object defined in the Product Reference payload)
+                  type: boolean
+                  x-cds-type: Boolean
+              type: object
+          type: object
+        type: array
+      fees:
+        description: >-
+          Fees and charges applicable to the account based on the equivalent
+          structure in Product Reference
+        items:
+          $ref: ./BankingProductFeeV1.yaml
+        type: array
+      lendingRate:
+        description: >-
+          The current rate to calculate interest payable being applied to
+          lending balances as it stands at the time of the API call
+        type: string
+        x-cds-type: RateString
+      lendingRates:
+        description: >-
+          Fully described deposit rates for this account based on the equivalent
+          structure in Product Reference
+        items:
+          $ref: ./BankingProductLendingRateV1.yaml
+        type: array
+      loan:
+        $ref: ./BankingLoanAccountV1.yaml
+      specificAccountUType:
+        description: The type of structure to present account specific fields.
+        enum:
+          - termDeposit
+          - creditCard
+          - loan
+        type: string
+      termDeposit:
+        items:
+          $ref: ./BankingTermDepositAccountV1.yaml
+        type: array
+    type: object
+    x-conditional:
+      - termDeposit
+      - creditCard
+      - loan

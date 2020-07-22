@@ -1,0 +1,24 @@
+description: Object that contains links to additional information on specific topics
+properties:
+  bundleUri:
+    description: Description of a bundle that this product can be part of
+    type: string
+    x-cds-type: URIString
+  eligibilityUri:
+    description: Eligibility rules and criteria for the product
+    type: string
+    x-cds-type: URIString
+  feesAndPricingUri:
+    description: >-
+      Description of fees, pricing, discounts, exemptions and bonuses for the
+      product
+    type: string
+    x-cds-type: URIString
+  overviewUri:
+    description: General overview of the product
+    type: string
+    x-cds-type: URIString
+  termsUri:
+    description: Terms and conditions for the product
+    type: string
+    x-cds-type: URIString

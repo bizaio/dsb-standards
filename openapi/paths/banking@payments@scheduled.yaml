@@ -1,0 +1,53 @@
+get:
+  description: >-
+    Obtain scheduled payments for multiple, filtered accounts that are the
+    source of funds for the payments
+  operationId: listScheduledPaymentsBulk
+  parameters:
+    - $ref: ../components/parameters/QueryProductCategory.yaml
+    - $ref: ../components/parameters/QueryAccountOpenStatus.yaml
+    - $ref: ../components/parameters/QueryAccountIsOwned.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/ListAccounts.yaml
+  summary: Get Scheduled Payments Bulk
+  tags:
+    - Banking
+    - Scheduled Payments
+  security:
+    - CDRAuth: ['bank:regular_payments:read']
+  x-version: '1'
+post:
+  description: Obtain scheduled payments for a specified list of accounts
+  operationId: listScheduledPaymentsSpecificAccounts
+  parameters:
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  requestBody:
+    $ref: ../components/requestBodies/RequestAccountIds.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/ListBalancesSpecificAccounts.yaml
+    '422':
+      $ref: ../components/responses/UnprocessableEntity.yaml
+  summary: Get Scheduled Payments For Specific Accounts
+  tags:
+    - Banking
+    - Scheduled Payments
+  security:
+    - CDRAuth: ['bank:regular_payments:read']
+  x-version: '1'

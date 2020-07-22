@@ -1,0 +1,67 @@
+properties:
+  additionalInformation:
+    $ref: ./BankingProductAdditionalInformationV1.yaml
+  applicationUri:
+    description: A link to an application web page where this product can be applied for.
+    type: string
+    x-cds-type: URIString
+  brand:
+    description: >-
+      A label of the brand for the product. Able to be used for filtering. For
+      data holders with single brands this value is still required
+    type: string
+  brandName:
+    description: An optional display name of the brand
+    type: string
+  description:
+    description: A description of the product
+    type: string
+  effectiveFrom:
+    description: >-
+      The date and time from which this product is effective (ie. is available
+      for origination).  Used to enable the articulation of products to the
+      regime before they are available for customers to originate
+    type: string
+    x-cds-type: DateTimeString
+  effectiveTo:
+    description: >-
+      The date and time at which this product will be retired and will no longer
+      be offered.  Used to enable the managed deprecation of products
+    type: string
+    x-cds-type: DateTimeString
+  isTailored:
+    description: >-
+      Indicates whether the product is specifically tailored to a circumstance. 
+      In this case fees and prices are significantly negotiated depending on
+      context. While all products are open to a degree of tailoring this flag
+      indicates that tailoring is expected and thus that the provision of
+      specific fees and rates is not applicable
+    type: boolean
+    x-cds-type: Boolean
+  lastUpdated:
+    description: >-
+      The last date and time that the information for this product was changed
+      (or the creation date for the product if it has never been altered)
+    type: string
+    x-cds-type: DateTimeString
+  name:
+    description: The display name of the product
+    type: string
+  productCategory:
+    $ref: ./BankingProductCategoryV1.yaml
+  productId:
+    description: >-
+      A data holder specific unique identifier for this product. This identifier
+      must be unique to a product but does not otherwise need to adhere to ID
+      permanence guidelines.
+    type: string
+    x-cds-type: ASCIIString
+required:
+  - brand
+  - description
+  - isTailored
+  - lastUpdated
+  - name
+  - productCategory
+  - productId
+type: object

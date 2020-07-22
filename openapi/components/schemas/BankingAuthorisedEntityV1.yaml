@@ -1,0 +1,21 @@
+properties:
+  abn:
+    description: Australian Business Number for the authorised entity
+    type: string
+  acn:
+    description: Australian Company Number for the authorised entity
+    type: string
+  arbn:
+    description: Australian Registered Body Number for the authorised entity
+    type: string
+  description:
+    description: >-
+      Description of the authorised entity derived from previously executed
+      direct debits
+    type: string
+  financialInstitution:
+    description: >-
+      Name of the financial institution through which the direct debit will be
+      executed. Is required unless the payment is made via a credit card scheme
+    type: string
+type: object

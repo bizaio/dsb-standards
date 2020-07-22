@@ -1,0 +1,37 @@
+properties:
+  additionalInfo:
+    description: Display text providing more information on this eligibility constraint
+    type: string
+  additionalInfoUri:
+    description: Link to a web page with more information on this eligibility constraint
+    type: string
+    x-cds-type: URIString
+  additionalValue:
+    description: >-
+      Generic field containing additional information relevant to the
+      [discountEligibilityType](#tocSproductdiscounteligibilitydoc) specified.
+      Whether mandatory or not is dependent on the value of
+      [discountEligibilityType](#tocSproductdiscounteligibilitydoc)
+    type: string
+  discountEligibilityType:
+    description: The type of the specific eligibility constraint for a discount
+    enum:
+      - BUSINESS
+      - PENSION_RECIPIENT
+      - MIN_AGE
+      - MAX_AGE
+      - MIN_INCOME
+      - MIN_TURNOVER
+      - STAFF
+      - STUDENT
+      - EMPLOYMENT_STATUS
+      - RESIDENCY_STATUS
+      - NATURAL_PERSON
+      - INTRODUCTORY
+      - OTHER
+    type: string
+required:
+  - discountEligibilityType
+type: object
+x-conditional:
+  - additionalValue

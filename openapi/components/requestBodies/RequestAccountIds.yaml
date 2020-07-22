@@ -1,0 +1,15 @@
+description: List of Account Identifiers
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        accountIds:
+          items:
+            description: Array of specific accountIds to obtain authorisations for
+            type: string
+            x-cds-type: ASCIIString
+          type: array
+      required:
+        - accountIds
+required: true

@@ -1,0 +1,15 @@
+allOf:
+  - $ref: ./CommonPhysicalAddressV1.yaml
+  - properties:
+      purpose:
+        description: Enumeration of values indicating the purpose of the physical address
+        enum:
+          - REGISTERED
+          - MAIL
+          - PHYSICAL
+          - WORK
+          - OTHER
+        type: string
+    required:
+      - purpose
+    type: object

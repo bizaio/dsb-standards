@@ -1,0 +1,51 @@
+get:
+  description: 'Obtain direct debit authorisations for multiple, filtered accounts'
+  operationId: listDirectDebitsBulk
+  parameters:
+    - $ref: ../components/parameters/QueryProductCategory.yaml
+    - $ref: ../components/parameters/QueryAccountOpenStatus.yaml
+    - $ref: ../components/parameters/QueryAccountIsOwned.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/ListDirectDebitsBulk.yaml
+  summary: Get Bulk Direct Debits
+  tags:
+    - Banking
+    - Direct Debits
+  security:
+    - CDRAuth: ['bank:regular_payments:read']
+  x-version: '1'
+post:
+  description: Obtain direct debit authorisations for a specified list of accounts
+  operationId: listDirectDebitsSpecificAccounts
+  parameters:
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  requestBody:
+    $ref: ../components/requestBodies/RequestAccountIds.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/ListDirectDebitsSpecificAccounts.yaml
+    '422':
+      $ref: ../components/responses/UnprocessableEntity.yaml
+  summary: Get Direct Debits For Specific Accounts
+  tags:
+    - Banking
+    - Direct Debits
+  security:
+    - CDRAuth: ['bank:regular_payments:read']
+  x-version: '1'

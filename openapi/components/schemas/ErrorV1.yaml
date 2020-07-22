@@ -1,0 +1,19 @@
+type: object
+properties:
+  code:
+    description: 'Must be one of the following: 0001 – Account not able to be found'
+    type: string
+  detail:
+    description: ID of the account not found
+    type: string
+  meta:
+    description: Optional additional data for specific error types
+    properties: {}
+    type: object
+  title:
+    description: 'Must be one of the following: Invalid account'
+    type: string
+required:
+  - code
+  - detail
+  - title

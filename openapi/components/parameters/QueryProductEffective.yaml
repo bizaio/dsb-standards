@@ -1,0 +1,15 @@
+description: >-
+  Allows for the filtering of products based on whether the current time
+  is within the period of time defined as effective by the effectiveFrom
+  and effectiveTo fields. Valid values are ‘CURRENT’, ‘FUTURE’ and ‘ALL’.
+  If absent defaults to 'CURRENT'
+in: query
+name: effective
+required: false
+schema:
+  default: CURRENT
+  enum:
+    - CURRENT
+    - FUTURE
+    - ALL
+  type: string

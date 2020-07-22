@@ -1,0 +1,6 @@
+description: Filter results based on a specific brand
+in: query
+name: brand
+required: false
+schema:
+  type: string

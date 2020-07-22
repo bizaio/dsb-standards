@@ -1,0 +1,13 @@
+description: >-
+  Used to filter results according to open/closed status. Values can be OPEN,
+  CLOSED or ALL. If absent then ALL is assumed
+in: query
+name: open-status
+required: false
+schema:
+  default: ALL
+  enum:
+    - OPEN
+    - CLOSED
+    - ALL
+  type: string

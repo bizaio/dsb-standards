@@ -1,0 +1,21 @@
+get:
+  description: Obtain the balance for a single specified account
+  operationId: getBalance
+  parameters:
+    - $ref: ../components/parameters/PathAccountId.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/GetBalance.yaml
+  summary: Get Account Balance
+  tags:
+    - Accounts
+    - Banking
+  security:
+    - CDRAuth: ['bank:accounts.basic:read']
+  x-version: '1'

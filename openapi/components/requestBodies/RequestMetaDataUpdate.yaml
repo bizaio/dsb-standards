@@ -1,0 +1,17 @@
+description: Register triggered action to perform
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        action:
+          default: REFRESH
+          description: The action to take for the meta data. At the moment the only
+            option is REFRESH which requires the data holder to call the ACCC to refresh
+            meta data as soon as practicable
+          enum:
+            - REFRESH
+          type: string
+      required:
+        - action
+required: true

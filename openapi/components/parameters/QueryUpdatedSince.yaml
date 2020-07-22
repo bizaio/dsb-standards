@@ -1,0 +1,9 @@
+description: >-
+  Only include products that have been updated after the specified date
+  and time. If absent defaults to include all products
+in: query
+name: updated-since
+required: false
+schema:
+  type: string
+x-cds-type: DateTimeString

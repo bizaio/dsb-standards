@@ -1,0 +1,23 @@
+get:
+  description: Obtain direct debit authorisations for a specific account
+  operationId: listDirectDebits
+  parameters:
+    - $ref: ../components/parameters/PathAccountId.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/ListDirectDebits.yaml
+  summary: Get Direct Debits For Account
+  tags:
+    - Banking
+    - Direct Debits
+  security:
+    - CDRAuth: ['bank:regular_payments:read']
+  x-version: '1'

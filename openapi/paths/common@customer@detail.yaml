@@ -1,0 +1,22 @@
+get:
+  description: >-
+    Obtain detailed information on the authorised customer within the current
+    session.
+  operationId: getCustomerDetail
+  parameters:
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/GetCustomerDetail.yaml
+  summary: Get Customer Detail
+  tags:
+    - Common
+    - Customer
+  security:
+    - CDRAuth: ['common:customer.detail:read']
+  x-version: '1'

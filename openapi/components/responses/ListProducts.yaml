@@ -1,0 +1,11 @@
+description: Success
+content:
+  application/json:
+    schema:
+      oneOf:
+        - $ref: ../schemas/ResponseBankingProductListV1.yaml
+        - $ref: ../schemas/ResponseBankingProductListV2.yaml
+        - $ref: ../schemas/ResponseBankingProductListV3.yaml
+headers:
+  x-v:
+    $ref: ../headers/XV.yaml

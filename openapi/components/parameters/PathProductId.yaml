@@ -1,0 +1,7 @@
+description: ID of the specific product requested
+in: path
+name: productId
+required: true
+schema:
+  type: string
+x-cds-type: ASCIIString

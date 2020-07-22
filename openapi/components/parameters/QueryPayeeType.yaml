@@ -1,0 +1,15 @@
+description: >-
+  Filter on the payee type field.  In addition to normal type field
+  values, ALL can be specified to retrieve all payees.  If absent the
+  assumed value is ALL
+in: query
+name: type
+required: false
+schema:
+  default: ALL
+  enum:
+    - DOMESTIC
+    - INTERNATIONAL
+    - BILLER
+    - ALL
+  type: string

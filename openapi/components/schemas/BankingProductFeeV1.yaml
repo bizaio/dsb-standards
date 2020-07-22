@@ -1,0 +1,83 @@
+properties:
+  accrualFrequency:
+    description: >-
+      The indicative frequency with which the fee is calculated on the account.
+      Only applies if balanceRate or accruedRate is also present. Formatted
+      according to [ISO 8601
+      Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations) (excludes
+      recurrence syntax)
+    type: string
+    x-cds-type: ExternalRef
+  accruedRate:
+    description: >-
+      A fee rate calculated based on a proportion of the calculated interest
+      accrued on the account. One of amount, balanceRate, transactionRate and
+      accruedRate is mandatory
+    type: string
+    x-cds-type: RateString
+  additionalInfo:
+    description: Display text providing more information on the fee
+    type: string
+  additionalInfoUri:
+    description: Link to a web page with more information on this fee
+    type: string
+    x-cds-type: URIString
+  additionalValue:
+    description: >-
+      Generic field containing additional information relevant to the
+      [feeType](#tocSproductfeetypedoc) specified. Whether mandatory or not is
+      dependent on the value of [feeType](#tocSproductfeetypedoc)
+    type: string
+  amount:
+    description: >-
+      The amount charged for the fee. One of amount, balanceRate,
+      transactionRate and accruedRate is mandatory
+    type: string
+    x-cds-type: AmountString
+  balanceRate:
+    description: >-
+      A fee rate calculated based on a proportion of the balance. One of amount,
+      balanceRate, transactionRate and accruedRate is mandatory
+    type: string
+    x-cds-type: RateString
+  currency:
+    description: The currency the fee will be charged in. Assumes AUD if absent
+    type: string
+    x-cds-type: CurrencyString
+  discounts:
+    description: An optional list of discounts to this fee that may be available
+    items:
+      $ref: ./BankingProductDiscountV1.yaml
+    type: array
+  feeType:
+    description: The type of fee
+    enum:
+      - PERIODIC
+      - TRANSACTION
+      - WITHDRAWAL
+      - DEPOSIT
+      - PAYMENT
+      - PURCHASE
+      - EVENT
+      - UPFRONT
+      - EXIT
+    type: string
+  name:
+    description: Name of the fee
+    type: string
+  transactionRate:
+    description: >-
+      A fee rate calculated based on a proportion of a transaction. One of
+      amount, balanceRate, transactionRate and accruedRate is mandatory
+    type: string
+    x-cds-type: RateString
+required:
+  - feeType
+  - name
+type: object
+x-conditional:
+  - additionalValue
+  - amount
+  - balanceRate
+  - transactionRate
+  - accruedRate

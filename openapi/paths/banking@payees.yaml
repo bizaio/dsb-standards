@@ -1,0 +1,23 @@
+get:
+  description: Obtain a list of pre-registered payees
+  operationId: listPayees
+  parameters:
+    - $ref: ../components/parameters/QueryPayeeType.yaml
+    - $ref: ../components/parameters/QueryPage.yaml
+    - $ref: ../components/parameters/QueryPageSize.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/ListPayees.yaml
+  summary: Get Payees
+  tags:
+    - Banking
+    - Payees
+  security:
+    - CDRAuth: ['bank:payees:read']
+  x-version: '1'

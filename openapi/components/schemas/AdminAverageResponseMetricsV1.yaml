@@ -1,0 +1,20 @@
+description: Average response time in seconds, at millisecond resolution, within
+  each performance tier
+properties:
+  highPriority:
+    $ref: ./AdminTierMetricV1.yaml
+  largePayload:
+    $ref: ./AdminTierMetricV1.yaml
+  lowPriority:
+    $ref: ./AdminTierMetricV1.yaml
+  unattended:
+    $ref: ./AdminTierMetricV1.yaml
+  unauthenticated:
+    $ref: ./AdminTierMetricV1.yaml
+type: object
+x-conditional:
+  - unauthenticated
+  - highPriority
+  - lowPriority
+  - unattended
+  - largePayload

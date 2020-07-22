@@ -1,0 +1,27 @@
+allOf:
+  - $ref: ./CommonPersonV1.yaml
+  - properties:
+      emailAddresses:
+        description: May be empty
+        items:
+          $ref: ./CommonEmailAddressV1.yaml
+        type: array
+      phoneNumbers:
+        description: Array is mandatory but may be empty if no phone numbers are held
+        items:
+          $ref: ./CommonPhoneNumberV1.yaml
+        type: array
+      physicalAddresses:
+        description: >-
+          Must contain at least one address. One and only one address may have
+          the purpose of REGISTERED. Zero or one, and no more than one, record
+          may have the purpose of MAIL. If zero then the REGISTERED address is
+          to be used for mail
+        items:
+          $ref: ./CommonPhysicalAddressWithPurposeV1.yaml
+        type: array
+    required:
+      - emailAddresses
+      - phoneNumbers
+      - physicalAddresses
+    type: object

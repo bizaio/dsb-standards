@@ -1,0 +1,15 @@
+get:
+  description: Obtain a list of scheduled outages for the implementation
+  operationId: getOutages
+  parameters:
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/GetOutages.yaml
+  summary: Get Outages
+  security: []
+  tags:
+    - Common
+    - Discovery
+  x-version: '1'

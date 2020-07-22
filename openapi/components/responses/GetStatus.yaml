@@ -1,0 +1,11 @@
+description: Success
+content:
+  application/json:
+    schema:
+      oneOf:
+        - $ref: ../schemas/ResponseCommonDiscoveryStatusV1.yaml
+headers:
+  x-fapi-interaction-id:
+    $ref: ../headers/XFAPIInteractionId.yaml
+  x-v:
+    $ref: ../headers/XV.yaml

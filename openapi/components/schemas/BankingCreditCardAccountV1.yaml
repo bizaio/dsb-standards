@@ -1,0 +1,22 @@
+properties:
+  minPaymentAmount:
+    description: The minimum payment amount due for the next card payment
+    type: string
+    x-cds-type: AmountString
+  paymentCurrency:
+    description: If absent assumes AUD
+    type: string
+    x-cds-type: CurrencyString
+  paymentDueAmount:
+    description: The amount due for the next card payment
+    type: string
+    x-cds-type: AmountString
+  paymentDueDate:
+    description: Date that the next payment for the card is due
+    type: string
+    x-cds-type: DateString
+required:
+  - minPaymentAmount
+  - paymentDueAmount
+  - paymentDueDate
+type: object

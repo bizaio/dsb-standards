@@ -1,0 +1,53 @@
+properties:
+  accountId:
+    description: A unique ID of the account adhering to the standards for ID permanence
+    type: string
+    x-cds-type: ASCIIString
+  creationDate:
+    description: Date that the account was created (if known)
+    type: string
+    x-cds-type: DateString
+  displayName:
+    description: >-
+      The display name of the account as defined by the bank. This should not
+      incorporate account numbers or PANs. If it does the values should be
+      masked according to the rules of the MaskedAccountString common type.
+    type: string
+  isOwned:
+    default: true
+    description: >-
+      Flag indicating that the customer associated with the authorisation is an
+      owner of the account. Does not indicate sole ownership, however. If not
+      present then 'true' is assumed
+    type: boolean
+    x-cds-type: Boolean
+  maskedNumber:
+    description: >-
+      A masked version of the account. Whether BSB/Account Number, Credit Card
+      PAN or another number
+    type: string
+    x-cds-type: MaskedAccountString
+  nickname:
+    description: A customer supplied nick name for the account
+    type: string
+  openStatus:
+    default: OPEN
+    description: Open or closed status for the account. If not present then OPEN is assumed
+    enum:
+      - OPEN
+      - CLOSED
+    type: string
+  productCategory:
+    $ref: ./BankingProductCategoryV1.yaml
+  productName:
+    description: >-
+      The unique identifier of the account as defined by the data holder (akin
+      to model number for the account)
+    type: string
+required:
+  - accountId
+  - displayName
+  - maskedNumber
+  - productCategory
+  - productName
+type: object

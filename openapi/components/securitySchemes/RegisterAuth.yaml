@@ -1,0 +1,6 @@
+type: oauth2
+flows:
+  clientCredentials:
+    tokenUrl: https://idp.cdr.register/token
+    scopes:
+      "cdr-register:bank:read": CDR Bank Read Access

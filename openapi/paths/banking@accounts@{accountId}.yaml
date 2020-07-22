@@ -1,0 +1,21 @@
+get:
+  description: Obtain detailed information on a single account
+  operationId: getAccountDetail
+  parameters:
+    - $ref: ../components/parameters/PathAccountId.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/GetAccountDetail.yaml
+  summary: Get Account Detail
+  tags:
+    - Accounts
+    - Banking
+  security:
+    - CDRAuth: ['bank:accounts.detail:read']
+  x-version: '1'

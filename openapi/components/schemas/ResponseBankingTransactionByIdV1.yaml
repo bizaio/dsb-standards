@@ -1,0 +1,11 @@
+properties:
+  data:
+    $ref: ./BankingTransactionDetailV1.yaml
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+type: object

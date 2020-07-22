@@ -1,0 +1,11 @@
+description: The period of metrics to be requested. Values can be CURRENT (meaning metrics for current day), HISTORIC (meaning metrics for previous days or months) or ALL. If absent the default is ALL.
+in: query
+name: period
+required: false
+schema:
+  default: ALL
+  enum:
+    - CURRENT
+    - HISTORIC
+    - ALL
+  type: string

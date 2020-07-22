@@ -1,0 +1,18 @@
+post:
+  description: Indicate that a critical update to the metadata for Accredited Data Recipients has been made and should be obtained
+  operationId: metadataUpdate
+  parameters:
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
+    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+  requestBody:
+    $ref: ../components/requestBodies/RequestMetaDataUpdate.yaml
+  responses:
+    200:
+      $ref: ../components/responses/MetadataUpdate.yaml
+  summary: Metadata Update
+  tags:
+    - Admin
+    - Register
+  x-version: '1'
+  security:
+    - RegisterAuth: []

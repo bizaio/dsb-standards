@@ -1,0 +1,8 @@
+description: Page of results to request (standard pagination)
+in: query
+name: page
+required: false
+schema:
+  default: 1
+  type: integer
+x-cds-type: PositiveInteger

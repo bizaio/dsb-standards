@@ -1,0 +1,13 @@
+description: Response time in seconds, at millisecond resolution
+properties:
+  currentDay:
+    description: Average response time for current day
+    type: number
+  previousDays:
+    description: Average response time for previous days. The first element
+      indicates yesterday and so on. A maximum of seven entries is required
+      if available.
+    items:
+      type: number
+    type: array
+type: object

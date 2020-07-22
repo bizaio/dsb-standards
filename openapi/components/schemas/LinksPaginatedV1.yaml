@@ -1,0 +1,37 @@
+properties:
+  first:
+    description: >-
+      URI to the first page of this set. Mandatory if this response is not the
+      first page
+    type: string
+    x-cds-type: URIString
+  last:
+    description: >-
+      URI to the last page of this set. Mandatory if this response is not the
+      last page
+    type: string
+    x-cds-type: URIString
+  next:
+    description: >-
+      URI to the next page of this set. Mandatory if this response is not the
+      last page
+    type: string
+    x-cds-type: URIString
+  prev:
+    description: >-
+      URI to the previous page of this set. Mandatory if this response is not
+      the first page
+    type: string
+    x-cds-type: URIString
+  self:
+    description: Fully qualified link that generated the current response document
+    type: string
+    x-cds-type: URIString
+required:
+  - self
+type: object
+x-conditional:
+  - prev
+  - next
+  - first
+  - last

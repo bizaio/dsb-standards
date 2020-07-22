@@ -1,0 +1,13 @@
+description: >-
+  Filter transactions to only transactions where this string value is found as a
+  substring of either the reference or description fields. Format is arbitrary
+  ASCII string. This parameter is optionally implemented by data holders. If it
+  is not implemented then a response should be provided as normal without text
+  filtering applied and an additional boolean field named
+  isQueryParamUnsupported should be included in the meta object and set to true
+  (whether the text parameter is supplied or not)
+in: query
+name: text
+required: false
+schema:
+  type: string

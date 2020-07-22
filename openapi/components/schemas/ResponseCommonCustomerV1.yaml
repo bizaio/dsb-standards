@@ -1,0 +1,27 @@
+properties:
+  data:
+    type: object
+    properties:
+      customerUType:
+        description: The type of customer object that is present
+        enum:
+          - person
+          - organisation
+        type: string
+      organisation:
+        $ref: ./CommonOrganisationV1.yaml
+      person:
+        $ref: ./CommonPersonV1.yaml
+    required:
+      - customerUType
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+type: object
+x-conditional:
+  - person
+  - organisation

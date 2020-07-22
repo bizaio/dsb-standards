@@ -1,0 +1,42 @@
+properties:
+  additionalInfo:
+    description: >-
+      Display text providing more information on the
+      [eligibility](#tocSproducteligibilitytypedoc) criteria. Mandatory if the
+      field is set to OTHER
+    type: string
+  additionalInfoUri:
+    description: Link to a web page with more information on this eligibility criteria
+    type: string
+    x-cds-type: URIString
+  additionalValue:
+    description: >-
+      Generic field containing additional information relevant to the
+      [eligibilityType](#tocSproducteligibilitytypedoc) specified. Whether
+      mandatory or not is dependent on the value of
+      [eligibilityType](#tocSproducteligibilitytypedoc)
+    type: string
+  eligibilityType:
+    description: >-
+      The type of eligibility criteria described.  See the next section for an
+      overview of valid values and their meaning
+    enum:
+      - BUSINESS
+      - PENSION_RECIPIENT
+      - MIN_AGE
+      - MAX_AGE
+      - MIN_INCOME
+      - MIN_TURNOVER
+      - STAFF
+      - STUDENT
+      - EMPLOYMENT_STATUS
+      - RESIDENCY_STATUS
+      - NATURAL_PERSON
+      - OTHER
+    type: string
+required:
+  - eligibilityType
+type: object
+x-conditional:
+  - additionalValue
+  - additionalInfo

@@ -1,0 +1,47 @@
+properties:
+  accountId:
+    description: A unique ID of the account adhering to the standards for ID permanence
+    type: string
+    x-cds-type: ASCIIString
+  amortisedLimit:
+    description: >-
+      Object representing the available limit amortised according to payment
+      schedule. Assumed to be zero if absent
+    type: string
+    x-cds-type: AmountString
+  availableBalance:
+    description: >-
+      Balance representing the amount of funds available for transfer. Assumed
+      to be zero or positive
+    type: string
+    x-cds-type: AmountString
+  creditLimit:
+    description: >-
+      Object representing the maximum amount of credit that is available for
+      this account. Assumed to be zero if absent
+    type: string
+    x-cds-type: AmountString
+  currency:
+    description: The currency for the balance amounts. If absent assumed to be AUD
+    type: string
+    x-cds-type: CurrencyString
+  currentBalance:
+    description: >-
+      The balance of the account at this time. Should align to the balance
+      available via other channels such as Internet Banking. Assumed to be
+      negative if the customer has money owing
+    type: string
+    x-cds-type: AmountString
+  purses:
+    description: >-
+      Optional array of balances for the account in other currencies. Included
+      to support accounts that support multi-currency purses such as Travel
+      Cards
+    items:
+      $ref: ./BankingBalancePurseV1.yaml
+    type: array
+required:
+  - accountId
+  - availableBalance
+  - currentBalance
+type: object

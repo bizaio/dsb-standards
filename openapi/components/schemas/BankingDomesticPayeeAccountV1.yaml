@@ -1,0 +1,14 @@
+properties:
+  accountName:
+    description: Name of the account to pay to
+    type: string
+  accountNumber:
+    description: Number of the account to pay to
+    type: string
+  bsb:
+    description: BSB of the account to pay to
+    type: string
+required:
+  - accountNumber
+  - bsb
+type: object

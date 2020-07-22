@@ -1,0 +1,110 @@
+properties:
+  accountId:
+    description: ID of the account for which transactions are provided
+    type: string
+    x-cds-type: ASCIIString
+  amount:
+    description: >-
+      The value of the transaction. Negative values mean money was outgoing from
+      the account
+    type: string
+    x-cds-type: AmountString
+  apcaNumber:
+    description: >-
+      6 Digit APCA number for the initiating institution. The field is
+      fixed-width and padded with leading zeros if applicable.
+    type: string
+  billerCode:
+    description: BPAY Biller Code for the transaction (if available)
+    type: string
+  billerName:
+    description: Name of the BPAY biller for the transaction (if available)
+    type: string
+  crn:
+    description: BPAY CRN for the transaction (if available)
+    type: string
+  currency:
+    description: The currency for the transaction amount. AUD assumed if not present
+    type: string
+    x-cds-type: CurrencyString
+  description:
+    description: The transaction description as applied by the financial institution
+    type: string
+  executionDateTime:
+    description: >-
+      The time the transaction was executed by the originating customer, if
+      available
+    type: string
+    x-cds-type: DateTimeString
+  isDetailAvailable:
+    description: >-
+      True if extended information is available using the transaction detail end
+      point. False if extended data is not available
+    type: boolean
+    x-cds-type: Boolean
+  merchantCategoryCode:
+    description: The merchant category code (or MCC) for an outgoing payment to a merchant
+    type: string
+  merchantName:
+    description: Name of the merchant for an outgoing payment to a merchant
+    type: string
+  postingDateTime:
+    description: >-
+      The time the transaction was posted. This field is Mandatory if the
+      transaction has status POSTED.  This is the time that appears on a
+      standard statement
+    type: string
+    x-cds-type: DateTimeString
+  reference:
+    description: >-
+      The reference for the transaction provided by the originating institution.
+      Empty string if no data provided
+    type: string
+  status:
+    description: >-
+      Status of the transaction whether pending or posted. Note that there is
+      currently no provision in the standards to guarantee the ability to
+      correlate a pending transaction with an associated posted transaction
+    enum:
+      - PENDING
+      - POSTED
+    type: string
+  transactionId:
+    description: >-
+      A unique ID of the transaction adhering to the standards for ID
+      permanence.  This is mandatory (through hashing if necessary) unless there
+      are specific and justifiable technical reasons why a transaction cannot be
+      uniquely identified for a particular account type
+    type: string
+    x-cds-type: ASCIIString
+  type:
+    description: The type of the transaction
+    enum:
+      - FEE
+      - INTEREST_CHARGED
+      - INTEREST_PAID
+      - TRANSFER_OUTGOING
+      - TRANSFER_INCOMING
+      - PAYMENT
+      - DIRECT_DEBIT
+      - OTHER
+    type: string
+  valueDateTime:
+    description: >-
+      Date and time at which assets become available to the account owner in
+      case of a credit entry, or cease to be available to the account owner in
+      case of a debit transaction entry
+    type: string
+    x-cds-type: DateTimeString
+required:
+  - accountId
+  - amount
+  - description
+  - isDetailAvailable
+  - reference
+  - status
+  - type
+type: object
+x-conditional:
+  - transactionId
+  - postingDateTime

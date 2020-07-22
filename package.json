@@ -1,0 +1,14 @@
+{
+  "name": "consumer-data-standards",
+  "version": "1.0.0",
+  "dependencies": {
+    "@redocly/openapi-cli": "^0.12.9",
+    "redoc-cli": "^0.9.8"
+  },
+  "private": true,
+  "scripts": {
+    "start": "openapi preview-docs",
+    "build": "openapi bundle -o dist",
+    "test": "openapi validate"
+  }
+}

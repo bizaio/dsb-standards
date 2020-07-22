@@ -1,0 +1,20 @@
+properties:
+  data:
+    type: object
+    properties:
+      balances:
+        description: The list of balances returned
+        items:
+          $ref: ./BankingBalanceV1.yaml
+        type: array
+    required:
+      - balances
+  links:
+    $ref: ./LinksPaginatedV1.yaml
+  meta:
+    $ref: ./MetaPaginatedV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

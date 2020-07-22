@@ -1,0 +1,97 @@
+description: >-
+  Australian address formatted according to the file format defined by the [PAF
+  file
+  format](https://auspost.com.au/content/dam/auspost_corp/media/documents/australia-post-data-guide.pdf)
+properties:
+  buildingName1:
+    description: Building/Property name 1
+    type: string
+  buildingName2:
+    description: Building/Property name 2
+    type: string
+  dpid:
+    description: >-
+      Unique identifier for an address as defined by Australia Post.  Also known
+      as Delivery Point Identifier
+    type: string
+  flatUnitNumber:
+    description: 'Unit number (including suffix, if applicable)'
+    type: string
+  flatUnitType:
+    description: Type of flat or unit for the address
+    type: string
+  floorLevelNumber:
+    description: Floor or level number (including alpha characters)
+    type: string
+  floorLevelType:
+    description: Type of floor or level for the address
+    type: string
+  localityName:
+    description: Full name of locality
+    type: string
+  lotNumber:
+    description: Allotment number for the address
+    type: string
+  postalDeliveryNumber:
+    description: Postal delivery number if the address is a postal delivery type
+    type: integer
+    x-cds-type: PositiveInteger
+  postalDeliveryNumberPrefix:
+    description: Postal delivery number prefix related to the postal delivery number
+    type: string
+  postalDeliveryNumberSuffix:
+    description: Postal delivery number suffix related to the postal delivery number
+    type: string
+  postalDeliveryType:
+    description: >-
+      Postal delivery type. (eg. PO BOX). Valid enumeration defined by Australia
+      Post PAF code file
+    type: string
+  postcode:
+    description: Postcode for the locality
+    type: string
+  state:
+    description: >-
+      State in which the address belongs. Valid enumeration defined by Australia
+      Post PAF code file [State Type
+      Abbreviation](https://auspost.com.au/content/dam/auspost_corp/media/documents/australia-post-data-guide.pdf).
+      NSW, QLD, VIC, NT, WA, SA, TAS, ACT, AAT
+    type: string
+  streetName:
+    description: The name of the street
+    type: string
+  streetSuffix:
+    description: >-
+      The street type suffix. Valid enumeration defined by Australia Post PAF
+      code file
+    type: string
+  streetType:
+    description: The street type. Valid enumeration defined by Australia Post PAF code file
+    type: string
+  thoroughfareNumber1:
+    description: >-
+      Thoroughfare number for a property (first number in a property ranged
+      address)
+    type: integer
+    x-cds-type: PositiveInteger
+  thoroughfareNumber1Suffix:
+    description: >-
+      Suffix for the thoroughfare number. Only relevant is thoroughfareNumber1
+      is populated
+    type: string
+  thoroughfareNumber2:
+    description: >-
+      Second thoroughfare number (only used if the property has a ranged address
+      eg 23-25)
+    type: integer
+    x-cds-type: PositiveInteger
+  thoroughfareNumber2Suffix:
+    description: >-
+      Suffix for the second thoroughfare number. Only relevant is
+      thoroughfareNumber2 is populated
+    type: string
+required:
+  - localityName
+  - postcode
+  - state
+type: object

@@ -1,0 +1,21 @@
+properties:
+  data:
+    type: object
+    properties:
+      outages:
+        description: >-
+          List of scheduled outages. Property is mandatory but may contain and empty
+          list if no outages are scheduled
+        items:
+          $ref: ./DiscoveryOutageV1.yaml
+        type: array
+    required:
+      - outages
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+type: object

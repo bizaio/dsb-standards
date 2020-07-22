@@ -1,0 +1,10 @@
+description: >-
+  Constrain the transaction history request to transactions with effective time
+  at or after this date/time. If absent defaults to newest-time minus 90 days. 
+  Format is aligned to DateTimeString common type
+in: query
+name: oldest-time
+required: false
+schema:
+  type: string
+x-cds-type: DateTimeString

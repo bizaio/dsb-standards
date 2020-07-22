@@ -1,0 +1,45 @@
+properties:
+  data:
+    type: object
+    properties:
+      availability:
+        $ref: './AdminAvailabilityMetricsV1.yaml'
+      averageResponse:
+        $ref: './AdminAverageResponseMetricsV1.yaml'
+      averageTps:
+        $ref: './AdminTPSMetricV1.yaml'
+      customerCount:
+        description: Number of customers with active authorisations at the time
+          of the call
+        type: integer
+      errors:
+        $ref: './AdminErrorMetricV1.yaml'
+      invocations:
+        $ref: './AdminInvocationMetricsV1.yaml'
+      peakTps:
+        $ref: './AdminPeakTPSMetricsV1.yaml'
+      performance:
+        $ref: './AdminPerformanceMetricsV1.yaml'
+      recipientCount:
+        description: Number of data recipients with active authorisations at the
+          time of the call
+        type: integer
+      rejections:
+        $ref: './AdminRejectionMetricsV1.yaml'
+      requestTime:
+        description: The date and time that the metrics in this payload were requested.
+        type: string
+        x-cds-type: DateTimeString
+      sessionCount:
+        $ref: './AdminSessionCountMetricsV1.yaml'
+    required:
+      - requestTime
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object
