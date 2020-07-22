@@ -9,8 +9,8 @@
   "private": true,
   "scripts": {
     "start": "openapi preview-docs",
-    "build": "openapi bundle -o dist",
-    "deploy": "npm run build && cp dist/openapi.yaml web && deploy-to-gh-pages --update web",
+    "build": "openapi bundle --ext json -o dist && openapi bundle --ext yaml -o dist",
+    "deploy": "npm run build && cp dist/openapi.* web && deploy-to-gh-pages --update web",
     "test": "openapi validate"
   }
 }
