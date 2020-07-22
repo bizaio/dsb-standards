@@ -121,8 +121,8 @@ get:
     - $ref: ../components/parameters/QueryProductCategory.yaml
     - $ref: ../components/parameters/QueryPage.yaml
     - $ref: ../components/parameters/QueryPageSize.yaml
-    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
-    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
   responses:
     '200':
       $ref: ../components/responses/ListProducts.yaml

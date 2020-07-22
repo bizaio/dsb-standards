@@ -4,8 +4,8 @@ get:
     session
   operationId: getCustomer
   parameters:
-    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
-    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
     - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
     - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
     - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml

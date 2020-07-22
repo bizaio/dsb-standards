@@ -6,8 +6,8 @@ get:
   operationId: getMetrics
   parameters:
     - $ref: ../components/parameters/QueryPeriod.yaml
-    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXV.yaml
-    - $ref: ../../../lab-shared/openapi/components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
   responses:
     200:
       $ref: ../components/responses/GetMetrics.yaml

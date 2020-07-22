@@ -1,0 +1,8 @@
+description: >-
+  Version of the API end point requested by the client. Must be set to a
+  positive integer.
+in: header
+name: x-v
+required: true
+schema:
+  type: string

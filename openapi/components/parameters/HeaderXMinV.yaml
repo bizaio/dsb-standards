@@ -1,0 +1,8 @@
+description: >-
+  Minimum version of the API end point requested by the client. Must be set to a
+  positive integer if provided.
+in: header
+name: x-min-v
+required: false
+schema:
+  type: string
