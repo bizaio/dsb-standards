@@ -8,6 +8,8 @@ info:
 
     The source for this Redocs is available at [https://github.com/bizaio/dsb-standards](https://github.com/bizaio/dsb-standards).
 
+    A downgraded Swagger 2 version of this document can be [downloaded here](http://bizaio.github.io/dsb-standards/swagger2.json).
+
   license:
     name: MIT License
     url: 'https://opensource.org/licenses/MIT'
