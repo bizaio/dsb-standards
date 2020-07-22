@@ -30,6 +30,7 @@ properties:
         description: The date and time that the metrics in this payload were requested.
         type: string
         x-cds-type: DateTimeString
+        format: date-time
       sessionCount:
         $ref: './AdminSessionCountMetricsV1.yaml'
     required:

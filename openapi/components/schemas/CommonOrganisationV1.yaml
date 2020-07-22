@@ -32,6 +32,7 @@ properties:
     description: The date the organisation described was established
     type: string
     x-cds-type: DateString
+    format: date
   industryCode:
     description: '[ANZSIC (2006)](http://www.abs.gov.au/anzsic) code for the organisation.'
     type: string
@@ -48,6 +49,7 @@ properties:
       date for the data
     type: string
     x-cds-type: DateTimeString
+    format: date-time
   legalName:
     description: 'Legal name, if different to the business name'
     type: string

@@ -15,6 +15,7 @@ properties:
     description: Date that the next payment for the card is due
     type: string
     x-cds-type: DateString
+    format: date
 required:
   - minPaymentAmount
   - paymentDueAmount

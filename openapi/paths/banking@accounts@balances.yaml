@@ -18,7 +18,7 @@ get:
       $ref: ../components/responses/ListBalancesBulk.yaml
   summary: Get Bulk Balances
   tags:
-    - Accounts
+    - Balances
     - Banking
   security:
     - CDRAuth: ['bank:accounts.basic:read']
@@ -43,7 +43,7 @@ post:
       $ref: ../components/responses/UnprocessableEntity.yaml
   summary: Get Balances For Specific Accounts
   tags:
-    - Accounts
+    - Balances
     - Banking
   security:
     - CDRAuth: ['bank:accounts.basic:read']

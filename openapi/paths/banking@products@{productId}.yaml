@@ -21,6 +21,5 @@ get:
   security: []
   tags:
     - Banking
-    - Banking Products
     - Products
   x-version: '3'

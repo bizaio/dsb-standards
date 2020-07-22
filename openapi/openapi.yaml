@@ -1,16 +1,18 @@
 info:
   contact:
-    email: cdr-data61@csiro.au
-    name: Consumer Data Standards
-    url: 'https://consumerdatastandards.org.au/'
+    email: hello@biza.io
+    name: Biza.io
+    url: 'https://biza.io/'
   description: >-
-    API sets created by the Australian Consumer Data Standards to meet the needs
-    of the Consumer Data Right
+    This specification mirrors the definitions of the Australian Consumer Data Standards and is intended to deliver the Standards in OpenAPI 3 format with additional data specifications.
+
+    The source for this Redocs is available at [https://github.com/bizaio/dsb-standards](https://github.com/bizaio/dsb-standards).
+
   license:
     name: MIT License
     url: 'https://opensource.org/licenses/MIT'
-  title: Consumer Data Standards
-  version: 1.3.0
+  title: Consumer Data Standards (Biza.io Edition)
+  version: 1.3.1
 openapi: 3.0.0
 paths:
   /banking/accounts:
@@ -76,8 +78,6 @@ tags:
     description: "Products"
   - name: Register
     description: "Register APIs"
-  - name: Banking Products
-    description: "Banking Products"
   - name: Scheduled Payments
     description: "Scheduled Payments APIs"
 x-tagGroups:

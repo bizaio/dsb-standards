@@ -11,6 +11,7 @@ properties:
       field is present the payments will continue indefinitely
     type: string
     x-cds-type: DateString
+    format: date
   interval:
     description: >-
       The interval for the payment. Formatted according to [ISO 8601

@@ -3,6 +3,7 @@ properties:
     description: The date the payee was created by the customer
     type: string
     x-cds-type: DateString
+    format: date
   description:
     description: A description of the payee provided by the customer
     type: string
