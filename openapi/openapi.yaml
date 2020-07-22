@@ -5,6 +5,9 @@ info:
     url: 'https://biza.io/'
   description: >-
     This specification mirrors the definitions of the Australian Consumer Data Standards and is intended to deliver the Standards in OpenAPI 3 format with additional data specifications.
+
+    The source for this Redocs is available at [https://github.com/bizaio/dsb-standards](https://github.com/bizaio/dsb-standards).
+    
   license:
     name: MIT License
     url: 'https://opensource.org/licenses/MIT'
