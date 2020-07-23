@@ -89,7 +89,7 @@ tags:
     description: "Transactions APIs"
 x-tagGroups:
   - name: "Banking APIs"
-    tags: ["Accounts", "Direct Debits", "Payees", "Banking Products", "Scheduled Payments"]
+    tags: ["Accounts", "Balances", "Direct Debits", "Payees", "Products", "Scheduled Payments", "Transactions"]
   - name: "Common APIs"
     tags: ["Customer", "Discovery"]
   - name: "Admin APIs"
