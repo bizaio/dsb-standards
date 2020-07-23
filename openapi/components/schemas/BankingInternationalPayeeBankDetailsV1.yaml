@@ -2,6 +2,7 @@ properties:
   accountNumber:
     description: Account Targeted for payment
     type: string
+    example: "12341234"
   bankAddress:
     $ref: ./BankingInternationalPayeeBankDetailsBankAddressV1.yaml
   beneficiaryBankBIC:
@@ -10,30 +11,37 @@ properties:
       9362](https://www.iso.org/standard/60390.html)
     type: string
     x-cds-type: ExternalRef
+    example: "ACMEAUSYHOM"
   chipNumber:
     description: Number for the Clearing House Interbank Payments System
     type: string
+    example: "12341234"
   country:
     description: >-
       Country of the recipient institution. A valid [ISO 3166
       Alpha-3](https://www.iso.org/iso-3166-country-codes.html) country code
     type: string
     x-cds-type: ExternalRef
+    example: "AUS"
   fedWireNumber:
     description: Number for Fedwire payment (Federal Reserve Wire Network)
     type: string
+    example: "12939281"
   legalEntityIdentifier:
     description: >-
       The legal entity identifier (LEI) for the beneficiary.  Aligns with [ISO
       17442](https://www.iso.org/standard/59771.html)
     type: string
     x-cds-type: ExternalRef
+    example: "549300TGFLH2QZV80T70"
   routingNumber:
     description: International bank routing number
     type: string
+    example: "18281828"
   sortCode:
     description: Sort code used for account identification in some jurisdictions
     type: string
+    example: "01"
 required:
   - accountNumber
   - country

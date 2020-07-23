@@ -3,12 +3,14 @@ properties:
   currentDay:
     description: Peak TPS for current day
     type: number
+    example: 134
   previousDays:
     description: Peak TPS for previous days. The first element indicates yesterday
       and so on. A maximum of seven entries is required if available
     items:
       type: number
     type: array
+    example: [88,33,138,254,600,123,288]
 x-conditional:
   - currentDay
   - previousDays

@@ -9,9 +9,11 @@ properties:
       calculation frequency are the same as the corresponding fee
     type: string
     x-cds-type: RateString
+    example: "0.012"
   additionalInfo:
     description: Display text providing more information on the discount
     type: string
+    example: "Discount Information"
   additionalInfoUri:
     description: Link to a web page with more information on this discount
     type: string
@@ -24,12 +26,14 @@ properties:
       or not is dependent on the value of
       [discountType](#tocSproductdiscounttypedoc)
     type: string
+    example: "Type specific value, see docs"
   amount:
     description: >-
       Value of the discount. When following properties include one of amount,
       balanceRate, transactionRate, accruedRate and feeRate is mandatory
     type: string
     x-cds-type: AmountString
+    example: "11.00"
   balanceRate:
     description: >-
       A discount rate calculated based on a proportion of the balance. Note that
@@ -40,6 +44,7 @@ properties:
       corresponding fee
     type: string
     x-cds-type: RateString
+    example: "0.0103"
   description:
     description: Description of the discount
     type: string
@@ -54,6 +59,7 @@ properties:
       - FEE_CAP
       - ELIGIBILITY_ONLY
     type: string
+    example: BALANCE
   eligibility:
     description: Eligibility constraints that apply to this discount
     items:
@@ -69,6 +75,7 @@ properties:
       are the same as the corresponding fee
     type: string
     x-cds-type: RateString
+    example: "0.0124"
   transactionRate:
     description: >-
       A discount rate calculated based on a proportion of a transaction. Note
@@ -77,6 +84,7 @@ properties:
       accruedRate and feeRate is mandatory
     type: string
     x-cds-type: RateString
+    example: "0.00234"
 required:
   - description
   - discountType

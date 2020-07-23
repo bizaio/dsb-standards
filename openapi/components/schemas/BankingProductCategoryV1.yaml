@@ -15,3 +15,4 @@ enum:
   - OVERDRAFTS
   - BUSINESS_LOANS
 type: string
+example: TRANS_AND_SAVINGS_ACCOUNTS

@@ -8,6 +8,7 @@ properties:
       recurrence syntax)
     type: string
     x-cds-type: ExternalRef
+    example: "P1D"
   accruedRate:
     description: >-
       A fee rate calculated based on a proportion of the calculated interest
@@ -15,9 +16,11 @@ properties:
       accruedRate is mandatory
     type: string
     x-cds-type: RateString
+    example: "0.002"
   additionalInfo:
     description: Display text providing more information on the fee
     type: string
+    example: "Additional Fee Information"
   additionalInfoUri:
     description: Link to a web page with more information on this fee
     type: string
@@ -29,22 +32,26 @@ properties:
       [feeType](#tocSproductfeetypedoc) specified. Whether mandatory or not is
       dependent on the value of [feeType](#tocSproductfeetypedoc)
     type: string
+    example: "Type specific value, see docs"
   amount:
     description: >-
       The amount charged for the fee. One of amount, balanceRate,
       transactionRate and accruedRate is mandatory
     type: string
     x-cds-type: AmountString
+    example: "10.01"
   balanceRate:
     description: >-
       A fee rate calculated based on a proportion of the balance. One of amount,
       balanceRate, transactionRate and accruedRate is mandatory
     type: string
     x-cds-type: RateString
+    example: "0.0023"
   currency:
     description: The currency the fee will be charged in. Assumes AUD if absent
     type: string
     x-cds-type: CurrencyString
+    example: "AUD"
   discounts:
     description: An optional list of discounts to this fee that may be available
     items:
@@ -63,15 +70,18 @@ properties:
       - UPFRONT
       - EXIT
     type: string
+    example: EXIT
   name:
     description: Name of the fee
     type: string
+    example: "Fee Name"
   transactionRate:
     description: >-
       A fee rate calculated based on a proportion of a transaction. One of
       amount, balanceRate, transactionRate and accruedRate is mandatory
     type: string
     x-cds-type: RateString
+    example: "0.0023"
 required:
   - feeType
   - name

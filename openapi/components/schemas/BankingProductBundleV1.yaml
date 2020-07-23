@@ -2,6 +2,7 @@ properties:
   additionalInfo:
     description: Display text providing more information on the bundle
     type: string
+    example: "A great bundle with all the extras"
   additionalInfoUri:
     description: >-
       Link to a web page with more information on the bundle criteria and
@@ -12,9 +13,11 @@ properties:
   description:
     description: Description of the bundle
     type: string
+    example: "Provides a savings account and loan"
   name:
     description: Name of the bundle
     type: string
+    example: "ACME Super Bundle"
   productIds:
     description: >-
       Array of product IDs for products included in the bundle that are
@@ -25,6 +28,7 @@ properties:
     items:
       type: string
       x-cds-type: ASCIIString
+      format: uuid
     type: array
 required:
   - description

@@ -3,6 +3,7 @@ properties:
     description: A unique ID of the account adhering to the standards for ID permanence
     type: string
     x-cds-type: ASCIIString
+    format: uuid
   creationDate:
     description: Date that the account was created (if known)
     type: string
@@ -14,6 +15,7 @@ properties:
       incorporate account numbers or PANs. If it does the values should be
       masked according to the rules of the MaskedAccountString common type.
     type: string
+    example: "ACME Savings Account"
   isOwned:
     default: true
     description: >-
@@ -28,9 +30,11 @@ properties:
       PAN or another number
     type: string
     x-cds-type: MaskedAccountString
+    example: "XXXX-XXXX-XXXX-1234"
   nickname:
     description: A customer supplied nick name for the account
     type: string
+    example: "Holiday Fund"
   openStatus:
     default: OPEN
     description: Open or closed status for the account. If not present then OPEN is assumed
@@ -45,6 +49,7 @@ properties:
       The unique identifier of the account as defined by the data holder (akin
       to model number for the account)
     type: string
+    example: "ACME Savings Maximiser"
 required:
   - accountId
   - displayName

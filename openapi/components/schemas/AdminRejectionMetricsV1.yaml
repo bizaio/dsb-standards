@@ -3,6 +3,7 @@ properties:
   currentDay:
     description: Number of calls rejected for current day
     type: number
+    example: 235
   previousDays:
     description: Number of calls rejected for previous days. The first element
       indicates yesterday and so on. A maximum of seven entries is required
@@ -10,6 +11,7 @@ properties:
     items:
       type: number
     type: array
+    example: [288,212,145,183,104,234,291]
 x-conditional:
   - currentDay
   - previousDays

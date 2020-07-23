@@ -4,6 +4,7 @@ properties:
     description: Percentage of calls within the performance threshold for the
       current day. 0.0 means 0%. 1.0 means 100%
     type: number
+    example: 1.0
   previousDays:
     description: Percentage of calls within the performance threshold for previous
       days. The first element indicates yesterday and so on. A maximum of seven
@@ -11,6 +12,7 @@ properties:
     items:
       type: number
     type: array
+    example: [1.0,1.0,0.998,0.99,1,1,0.95]
 type: object
 x-conditional:
   - currentDay

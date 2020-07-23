@@ -2,6 +2,7 @@ properties:
   additionalInfo:
     description: Display text providing more information on this eligibility constraint
     type: string
+    example: "Eligibility criteria explanation"
   additionalInfoUri:
     description: Link to a web page with more information on this eligibility constraint
     type: string
@@ -14,6 +15,7 @@ properties:
       Whether mandatory or not is dependent on the value of
       [discountEligibilityType](#tocSproductdiscounteligibilitydoc)
     type: string
+    example: "Type specific value, see docs"
   discountEligibilityType:
     description: The type of the specific eligibility constraint for a discount
     enum:
@@ -31,6 +33,7 @@ properties:
       - INTRODUCTORY
       - OTHER
     type: string
+    example: BUSINESS
 required:
   - discountEligibilityType
 type: object

@@ -10,6 +10,7 @@ properties:
       of twelve entries is required if available. 0.0 means 0%. 1.0 means 100%.
     items:
       type: number
+    example: [1.0, 1.0, 1.0, 0.99,1.0, 1.0, 0.989, 0.956,1.0, 1.0, 1.0, 0.99,1.0, 1.0, 1.0, 0.99]
     type: array
 type: object
 x-conditional:

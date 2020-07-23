@@ -5,11 +5,14 @@ properties:
       Alpha-3](https://www.iso.org/iso-3166-country-codes.html) country code
     type: string
     x-cds-type: ExternalRef
+    example: "AUS"
   message:
     description: Response message for the payment
     type: string
+    example: "Payment Received"
   name:
     description: Name of the beneficiary
     type: string
+    example: "Woolie Jumpers International"
 required:
   - country

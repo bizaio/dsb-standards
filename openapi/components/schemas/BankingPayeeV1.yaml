@@ -14,6 +14,7 @@ properties:
     description: ID of the payee adhering to the rules of ID permanence
     type: string
     x-cds-type: ASCIIString
+    format: uuid
   type:
     description: >-
       The type of payee. DOMESTIC means a registered payee for domestic payments
@@ -24,6 +25,7 @@ properties:
       - INTERNATIONAL
       - BILLER
     type: string
+    example: BILLER
 required:
   - nickname
   - payeeId

@@ -3,14 +3,17 @@ properties:
     description: The minimum payment amount due for the next card payment
     type: string
     x-cds-type: AmountString
+    example: "10.00"
   paymentCurrency:
     description: If absent assumes AUD
     type: string
     x-cds-type: CurrencyString
+    example: "AUD"
   paymentDueAmount:
     description: The amount due for the next card payment
     type: string
     x-cds-type: AmountString
+    example: "10.00"
   paymentDueDate:
     description: Date that the next payment for the card is due
     type: string

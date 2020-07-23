@@ -10,26 +10,32 @@ properties:
       available even if the feature exists for the account
     type: string
     x-cds-type: AmountString
+    example: "1000.00"
   maxRedrawCurrency:
     description: If absent assumes AUD
     type: string
     x-cds-type: CurrencyString
+    example: "AUS"
   minInstalmentAmount:
     description: Minimum amount of next instalment
     type: string
     x-cds-type: AmountString
+    example: "122.22"
   minInstalmentCurrency:
     description: If absent assumes AUD
     type: string
     x-cds-type: CurrencyString
+    example: "AUD"
   minRedraw:
     description: Minimum redraw amount
     type: string
     x-cds-type: AmountString
+    example: "500.00"
   minRedrawCurrency:
     description: If absent assumes AUD
     type: string
     x-cds-type: CurrencyString
+    example: "AUD"
   nextInstalmentDate:
     description: Next date that an instalment is required
     type: string
@@ -41,6 +47,7 @@ properties:
       account
     type: boolean
     x-cds-type: Boolean
+    example: false
   offsetAccountIds:
     description: >-
       The accountIDs of the configured offset accounts attached to this loan.

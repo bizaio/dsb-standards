@@ -2,12 +2,15 @@ properties:
   accountName:
     description: Name of the account to pay to
     type: string
+    example: "Woolie Jumpers Shop"
   accountNumber:
     description: Number of the account to pay to
     type: string
+    example: "1234123423"
   bsb:
     description: BSB of the account to pay to
     type: string
+    example: "123-123"
 required:
   - accountNumber
   - bsb

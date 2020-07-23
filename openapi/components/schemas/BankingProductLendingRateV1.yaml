@@ -2,6 +2,7 @@ properties:
   additionalInfo:
     description: Display text providing more information on the rate.
     type: string
+    example: "Lending Rate Information"
   additionalInfoUri:
     description: Link to a web page with more information on this rate
     type: string
@@ -14,6 +15,7 @@ properties:
       mandatory or not is dependent on the value of
       [lendingRateType](#tocSproductlendingratetypedoc)
     type: string
+    example: "Type specific value, see docs"
   applicationFrequency:
     description: >-
       The period after which the calculated amount(s) (see calculationFrequency)
@@ -23,6 +25,7 @@ properties:
       recurrence syntax)
     type: string
     x-cds-type: ExternalRef
+    example: "P1D"
   calculationFrequency:
     description: >-
       The period after which the rate is applied to the balance to calculate the
@@ -33,10 +36,12 @@ properties:
       (excludes recurrence syntax)
     type: string
     x-cds-type: ExternalRef
+    example: "P30D"
   comparisonRate:
     description: A comparison rate equivalent for this rate
     type: string
     x-cds-type: RateString
+    example: "0.002"
   interestPaymentDue:
     description: >-
       When loan payments are due to be paid within each period. The investment
@@ -45,6 +50,7 @@ properties:
       - IN_ARREARS
       - IN_ADVANCE
     type: string
+    example: IN_ADVANCE
   lendingRateType:
     description: >-
       The type of rate (fixed, variable, etc). See the next section for an
@@ -62,6 +68,7 @@ properties:
       - BUNDLE_DISCOUNT_FIXED
       - BUNDLE_DISCOUNT_VARIABLE
     type: string
+    example: PURCHASE
   loanPurpose:
     description: >-
       The reason for taking out the loan. If absent, the lending rate is
@@ -70,10 +77,12 @@ properties:
       - OWNER_OCCUPIED
       - INVESTMENT
     type: string
+    example: OWNER_OCCUPIED
   rate:
     description: The rate to be applied
     type: string
     x-cds-type: RateString
+    example: "0.0023"
   repaymentType:
     description: >-
       Options in place for repayments. If absent, the lending rate is applicable
@@ -82,6 +91,7 @@ properties:
       - INTEREST_ONLY
       - PRINCIPAL_AND_INTEREST
     type: string
+    example: INTEREST_ONLY
   tiers:
     description: Rate tiers applicable for this rate
     items:

@@ -3,11 +3,13 @@ properties:
   currentDay:
     description: API call counts for current day
     type: number
+    example: 18833
   previousDays:
     description: API call counts for previous days. The first element indicates yesterday and so on. A maximum of seven entries is required if available
     items:
       type: number
     type: array
+    example: [15293,12834,28218,18234,18293,26534,15367]
 x-conditional:
   - currentDay
   - previousDays

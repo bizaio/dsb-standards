@@ -3,10 +3,12 @@ properties:
     description: The balance available for this additional currency purse
     type: string
     x-cds-type: AmountString
+    example: "10.00"
   currency:
     description: The currency for the purse
     type: string
     x-cds-type: CurrencyString
+    example: "AUD"
 required:
   - amount
 type: object

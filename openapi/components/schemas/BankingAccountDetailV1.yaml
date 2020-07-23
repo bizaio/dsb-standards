@@ -8,6 +8,7 @@ allOf:
           be formatted as digits only with leading zeros included and no
           punctuation or spaces
         type: string
+        example: "01231234"
       addresses:
         description: The addresses for the account to be used for correspondence
         items:
@@ -18,11 +19,13 @@ allOf:
           The unmasked BSB for the account. Is expected to be formatted as
           digits only with leading zeros included and no punctuation or spaces
         type: string
+        example: "999-999"
       bundleName:
         description: >-
           Optional field to indicate if this account is part of a bundle that is
           providing additional benefit for to the customer
         type: string
+        example: "Great Bundle Savings"
       creditCard:
         $ref: ./BankingCreditCardAccountV1.yaml
       depositRate:
@@ -31,6 +34,7 @@ allOf:
           balances as it stands at the time of the API call
         type: string
         x-cds-type: RateString
+        example: "0.02"
       depositRates:
         description: >-
           Fully described deposit rates for this account based on the equivalent
@@ -71,6 +75,7 @@ allOf:
           lending balances as it stands at the time of the API call
         type: string
         x-cds-type: RateString
+        example: "0.02"
       lendingRates:
         description: >-
           Fully described deposit rates for this account based on the equivalent
@@ -87,6 +92,7 @@ allOf:
           - creditCard
           - loan
         type: string
+        example: "loan"
       termDeposit:
         items:
           $ref: ./BankingTermDepositAccountV1.yaml

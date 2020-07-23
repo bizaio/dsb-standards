@@ -5,6 +5,7 @@ properties:
       [eligibility](#tocSproducteligibilitytypedoc) criteria. Mandatory if the
       field is set to OTHER
     type: string
+    example: "Eligibility Criteria"
   additionalInfoUri:
     description: Link to a web page with more information on this eligibility criteria
     type: string
@@ -17,6 +18,7 @@ properties:
       mandatory or not is dependent on the value of
       [eligibilityType](#tocSproducteligibilitytypedoc)
     type: string
+    example: "Type dependent value, see docs"
   eligibilityType:
     description: >-
       The type of eligibility criteria described.  See the next section for an
@@ -35,6 +37,7 @@ properties:
       - NATURAL_PERSON
       - OTHER
     type: string
+    example: MIN_TURNOVER
 required:
   - eligibilityType
 type: object

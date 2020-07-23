@@ -4,6 +4,7 @@ properties:
       Display text providing more information on the feature. Mandatory if the
       [feature type](#tocSproductfeaturetypedoc) is set to OTHER
     type: string
+    example: "Additional Feature Information"
   additionalInfoUri:
     description: Link to a web page with more information on this feature
     type: string
@@ -15,6 +16,7 @@ properties:
       [featureType](#tocSproductfeaturetypedoc) specified. Whether mandatory or
       not is dependent on the value of the
       [featureType.](#tocSproductfeaturetypedoc)
+    example: "Type specific value, see docs"
     type: string
   featureType:
     description: The type of feature described
@@ -43,6 +45,7 @@ properties:
       - NOTIFICATIONS
       - OTHER
     type: string
+    example: CARD_ACCESS
 required:
   - featureType
 type: object

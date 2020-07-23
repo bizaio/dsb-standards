@@ -2,9 +2,11 @@ properties:
   address:
     description: Address of the recipient Bank
     type: string
+    example: "100 Wiltock Place, London, GB"
   name:
     description: Name of the recipient Bank
     type: string
+    example: "KACME Bank"
 required:
   - address
   - name

@@ -2,15 +2,18 @@ properties:
   billerCode:
     description: BPAY Biller Code of the Biller
     type: string
+    example: "12345"
   billerName:
     description: Name of the Biller
     type: string
+    example: "BPAY Electricity Co"
   crn:
     description: >-
       BPAY CRN of the Biller. If the contents of the CRN match the format of a
       Credit Card PAN then it should be masked using the rules applicable for
       the MaskedPANString common type
     type: string
+    example: "XXXXXXXXXXXX1234"
 required:
   - billerCode
   - billerName

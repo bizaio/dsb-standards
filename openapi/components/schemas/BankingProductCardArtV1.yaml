@@ -9,5 +9,6 @@ properties:
   title:
     description: Display label for the specific image
     type: string
+    example: "Customise your card and look snazzy"
 required:
   - imageUri

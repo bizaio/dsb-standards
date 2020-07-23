@@ -2,9 +2,11 @@ properties:
   identifier:
     description: The identifier of the PayID (dependent on type)
     type: string
+    example: "hello@biza.io"
   name:
     description: The name assigned to the PayID by the owner of the PayID
     type: string
+    example: "Biza Pty Ltd"
   type:
     description: The type of the PayID
     enum:
@@ -13,6 +15,7 @@ properties:
       - ABN
       - ORG_IDENTIFIER
     type: string
+    example: EMAIL
 required:
   - identifier
   - type

@@ -2,6 +2,7 @@ properties:
   additionalInfo:
     description: Display text providing more information on the rate
     type: string
+    example: "A great deposit rate"
   additionalInfoUri:
     description: Link to a web page with more information on this rate
     type: string
@@ -14,6 +15,7 @@ properties:
       mandatory or not is dependent on the value of
       [depositRateType](#tocSproductdepositratetypedoc)
     type: string
+    example: "Type specific value, see docs"
   applicationFrequency:
     description: >-
       The period after which the calculated amount(s) (see calculationFrequency)
@@ -23,6 +25,7 @@ properties:
       recurrence syntax)
     type: string
     x-cds-type: ExternalRef
+    example: "P30D"
   calculationFrequency:
     description: >-
       The period after which the rate is applied to the balance to calculate the
@@ -33,6 +36,7 @@ properties:
       (excludes recurrence syntax)
     type: string
     x-cds-type: ExternalRef
+    example: "P1D"
   depositRateType:
     description: >-
       The type of rate (base, bonus, etc). See the next section for an overview
@@ -46,10 +50,12 @@ properties:
       - FLOATING
       - MARKET_LINKED
     type: string
+    example: FIXED
   rate:
     description: The rate to be applied
     type: string
     x-cds-type: RateString
+    example: "0.011"
   tiers:
     description: Rate tiers applicable for this rate
     items:

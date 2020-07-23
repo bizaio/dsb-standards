@@ -16,6 +16,7 @@ properties:
       - card
       - payId
     type: string
+    example: payId
 required:
   - payeeAccountUType
 type: object

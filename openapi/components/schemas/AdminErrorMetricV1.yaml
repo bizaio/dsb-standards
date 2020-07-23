@@ -3,11 +3,13 @@ properties:
   currentDay:
     description: Number of errors for current day
     type: number
+    example: 0
   previousDays:
     description: Number of errors for previous days. The first element indicates yesterday and so on. A maximum of seven entries is required if available
     items:
       type: number
     type: array
+    example: [1,4,8,0,0,22,0]
 x-conditional:
   - currentDay
   - previousDays

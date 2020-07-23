@@ -2,6 +2,7 @@ properties:
   additionalInfo:
     description: Display text providing more information the constraint
     type: string
+    example: "Some information about the constraint"
   additionalInfoUri:
     description: Link to a web page with more information on the constraint
     type: string
@@ -14,6 +15,7 @@ properties:
       mandatory or not is dependent on the value of
       [constraintType](#tocSproductconstrainttypedoc)
     type: string
+    example: "Type specific value, see documentation"
   constraintType:
     description: >-
       The type of constraint described.  See the next section for an overview of
@@ -25,6 +27,7 @@ properties:
       - MAX_LIMIT
       - MIN_LIMIT
     type: string
+    example: MIN_BALANCE
 required:
   - constraintType
 type: object

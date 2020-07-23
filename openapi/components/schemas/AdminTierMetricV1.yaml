@@ -3,6 +3,7 @@ properties:
   currentDay:
     description: Average response time for current day
     type: number
+    example: 55
   previousDays:
     description: Average response time for previous days. The first element
       indicates yesterday and so on. A maximum of seven entries is required
@@ -10,4 +11,5 @@ properties:
     items:
       type: number
     type: array
+    example: [55.0,10.12,40.22,66.00,22.00,11.00,10.00]
 type: object
