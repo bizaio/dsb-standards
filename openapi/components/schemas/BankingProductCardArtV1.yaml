@@ -12,3 +12,4 @@ properties:
     example: "Customise your card and look snazzy"
 required:
   - imageUri
+type: object

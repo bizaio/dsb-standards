@@ -21,3 +21,4 @@ properties:
     $ref: ./BankingTransactionDetailExtendedDataX2P101PayloadV1.yaml
 required:
   - service
+type: object

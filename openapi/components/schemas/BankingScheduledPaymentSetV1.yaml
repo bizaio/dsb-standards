@@ -27,3 +27,4 @@ required:
   - to
 x-conditional:
   - amount
+type: object

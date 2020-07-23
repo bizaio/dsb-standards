@@ -8,3 +8,4 @@ properties:
 required:
   - data
   - links
+type: object
