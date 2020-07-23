@@ -3,10 +3,14 @@ info:
     email: hello@biza.io
     name: Biza.io
     url: 'https://biza.io/'
-  description: >-
-    <p>This specification mirrors the definitions of the Australian Consumer Data Standards and is intended to deliver the Standards in OpenAPI 3 format with additional data specifications.</p>
-    <p>The source for this Redocs is available at [https://github.com/bizaio/dsb-standards](https://github.com/bizaio/dsb-standards).</p>
-    <p>A downgraded Swagger 2 version of this document can be [downloaded here](http://bizaio.github.io/dsb-standards/swagger2.json).</p>
+  description: >
+    This specification mirrors the definitions of the Australian Consumer Data Standards and is intended to deliver the Standards in OpenAPI 3 format with additional data specifications.
+
+
+    The source for this Redocs is available at [https://github.com/bizaio/dsb-standards](https://github.com/bizaio/dsb-standards).
+
+
+    A downgraded Swagger 2 version of this document can be [downloaded here](http://bizaio.github.io/dsb-standards/swagger2.json).
   license:
     name: MIT License
     url: 'https://opensource.org/licenses/MIT'
