@@ -14,4 +14,3 @@ properties:
     type: string
 required:
   - extendedDescription
-type: object

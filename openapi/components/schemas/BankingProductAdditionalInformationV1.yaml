@@ -1,5 +1,4 @@
 description: Object that contains links to additional information on specific topics
-type: object
 properties:
   bundleUri:
     description: Description of a bundle that this product can be part of
