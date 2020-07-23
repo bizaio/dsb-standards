@@ -6,4 +6,3 @@ allOf:
     required:
       - extendedData
     type: object
-type: object

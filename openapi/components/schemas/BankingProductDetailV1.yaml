@@ -43,4 +43,3 @@ allOf:
           $ref: ./BankingProductLendingRateV1.yaml
         type: array
     type: object
-type: object

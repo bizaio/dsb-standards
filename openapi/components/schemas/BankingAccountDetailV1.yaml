@@ -102,4 +102,3 @@ allOf:
       - termDeposit
       - creditCard
       - loan
-type: object
