@@ -13,3 +13,4 @@ allOf:
     required:
       - physicalAddresses
     type: object
+type: object
