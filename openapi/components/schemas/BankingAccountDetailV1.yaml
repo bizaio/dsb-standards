@@ -40,7 +40,7 @@ allOf:
           Fully described deposit rates for this account based on the equivalent
           structure in Product Reference
         items:
-          $ref: ./BankingProductDepositRateV1.yaml
+          $ref: ./BankingProductDepositRateV2.yaml
         type: array
       features:
         description: >-
@@ -81,7 +81,7 @@ allOf:
           Fully described deposit rates for this account based on the equivalent
           structure in Product Reference
         items:
-          $ref: ./BankingProductLendingRateV1.yaml
+          $ref: ./BankingProductLendingRateV2.yaml
         type: array
       loan:
         $ref: ./BankingLoanAccountV1.yaml
