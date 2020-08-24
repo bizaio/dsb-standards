@@ -19,7 +19,7 @@ allOf:
           The unmasked BSB for the account. Is expected to be formatted as
           digits only with leading zeros included and no punctuation or spaces
         type: string
-        example: "999-999"
+        example: "999999"
       bundleName:
         description: >-
           Optional field to indicate if this account is part of a bundle that is

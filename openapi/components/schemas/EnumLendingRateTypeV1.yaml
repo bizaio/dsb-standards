@@ -1,0 +1,16 @@
+description: >-
+  The type of rate (fixed, variable, etc). See the next section for an
+  overview of valid values and their meaning
+enum:
+  - FIXED
+  - VARIABLE
+  - INTRODUCTORY
+  - DISCOUNT
+  - PENALTY
+  - FLOATING
+  - MARKET_LINKED
+  - CASH_ADVANCE
+  - PURCHASE
+  - BUNDLE_DISCOUNT_FIXED
+  - BUNDLE_DISCOUNT_VARIABLE
+type: string

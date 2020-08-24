@@ -1,0 +1,7 @@
+description: >-
+  When loan payments are due to be paid within each period. The investment
+  benefit of earlier payments affect the rate that can be offered
+enum:
+  - IN_ARREARS
+  - IN_ADVANCE
+type: string

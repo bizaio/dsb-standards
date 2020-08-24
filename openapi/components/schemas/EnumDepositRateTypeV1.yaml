@@ -1,0 +1,13 @@
+description: >-
+  The type of rate (base, bonus, etc). See the next section for an overview
+  of valid values and their meaning
+enum:
+  - FIXED
+  - BONUS
+  - BUNDLE_BONUS
+  - VARIABLE
+  - INTRODUCTORY
+  - FLOATING
+  - MARKET_LINKED
+type: string
+example: FIXED

@@ -1,0 +1,7 @@
+description: >-
+  Options in place for repayments. If absent, the lending rate is applicable
+  to all repayment types
+enum:
+  - INTEREST_ONLY
+  - PRINCIPAL_AND_INTEREST
+type: string

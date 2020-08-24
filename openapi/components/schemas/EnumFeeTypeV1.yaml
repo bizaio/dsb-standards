@@ -1,0 +1,13 @@
+description: The type of fee
+enum:
+  - PERIODIC
+  - TRANSACTION
+  - WITHDRAWAL
+  - DEPOSIT
+  - PAYMENT
+  - PURCHASE
+  - EVENT
+  - UPFRONT
+  - EXIT
+type: string
+example: EXIT
