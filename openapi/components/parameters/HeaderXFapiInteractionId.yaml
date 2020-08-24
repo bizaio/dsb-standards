@@ -8,3 +8,4 @@ name: x-fapi-interaction-id
 required: false
 schema:
   type: string
+  format: uuid
