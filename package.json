@@ -5,8 +5,8 @@
     "@redocly/openapi-cli": "^0.12.16",
     "api-spec-converter": "git+https://github.com/LucyBot-Inc/api-spec-converter.git",
     "deploy-to-gh-pages": "^1.3.7",
-    "redoc": "^2.0.0-rc.33",
-    "redoc-cli": "^0.9.8"
+    "redoc": "^2.0.0-rc.39",
+    "redoc-cli": "^0.9.11"
   },
   "private": true,
   "scripts": {
