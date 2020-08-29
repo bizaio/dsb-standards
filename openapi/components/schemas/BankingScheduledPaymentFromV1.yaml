@@ -6,7 +6,6 @@ properties:
   accountId:
     description: ID of the account that is the source of funds for the payment
     type: string
-    x-cds-type: ASCIIString
 required:
   - accountId
 type: object

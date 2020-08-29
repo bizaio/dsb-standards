@@ -1,6 +1,5 @@
-description: >-
-  The type of rate (fixed, variable, etc). See the next section for an
-  overview of valid values and their meaning
+description:
+  $ref: ./EnumBankingLendingRateTypeV1.md
 enum:
   - FIXED
   - VARIABLE

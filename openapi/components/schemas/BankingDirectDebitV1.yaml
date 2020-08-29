@@ -2,19 +2,17 @@ properties:
   accountId:
     description: A unique ID of the account adhering to the standards for ID permanence.
     type: string
-    x-cds-type: ASCIIString
     example: "a7081742-79b2-4930-becb-c9dd80d25b24"
   authorisedEntity:
     $ref: ./BankingAuthorisedEntityV1.yaml
   lastDebitAmount:
     description: The amount of the last debit executed under this authorisation
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "10.00"
   lastDebitDateTime:
     description: The date and time of the last debit executed under this authorisation
     type: string
-    x-cds-type: DateTimeString
     format: date-time
 required:
   - accountId

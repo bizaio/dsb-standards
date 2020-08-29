@@ -8,7 +8,6 @@ properties:
   additionalInfoUri:
     description: Link to a web page with more information on this feature
     type: string
-    x-cds-type: URIString
     format: uri
   additionalValue:
     description: >-
@@ -19,33 +18,7 @@ properties:
     example: "Type specific value, see docs"
     type: string
   featureType:
-    description: The type of feature described
-    enum:
-      - CARD_ACCESS
-      - ADDITIONAL_CARDS
-      - UNLIMITED_TXNS
-      - FREE_TXNS
-      - FREE_TXNS_ALLOWANCE
-      - LOYALTY_PROGRAM
-      - OFFSET
-      - OVERDRAFT
-      - REDRAW
-      - INSURANCE
-      - BALANCE_TRANSFERS
-      - INTEREST_FREE
-      - INTEREST_FREE_TRANSFERS
-      - DIGITAL_WALLET
-      - DIGITAL_BANKING
-      - NPP_PAYID
-      - NPP_ENABLED
-      - DONATE_INTEREST
-      - BILL_PAYMENT
-      - COMPLEMENTARY_PRODUCT_DISCOUNTS
-      - BONUS_REWARDS
-      - NOTIFICATIONS
-      - OTHER
-    type: string
-    example: CARD_ACCESS
+    $ref: ./EnumBankingProductFeatureTypeV1.yaml
 required:
   - featureType
 type: object

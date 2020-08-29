@@ -6,7 +6,6 @@ properties:
   additionalInfoUri:
     description: Link to a web page with more information on the constraint
     type: string
-    x-cds-type: URIString
     format: uri
   additionalValue:
     description: >-
@@ -17,17 +16,7 @@ properties:
     type: string
     example: "Type specific value, see documentation"
   constraintType:
-    description: >-
-      The type of constraint described.  See the next section for an overview of
-      valid values and their meaning
-    enum:
-      - MIN_BALANCE
-      - MAX_BALANCE
-      - OPENING_BALANCE
-      - MAX_LIMIT
-      - MIN_LIMIT
-    type: string
-    example: MIN_BALANCE
+    $ref: ./EnumBankingProductConstraintTypeV1.yaml
 required:
   - constraintType
 type: object

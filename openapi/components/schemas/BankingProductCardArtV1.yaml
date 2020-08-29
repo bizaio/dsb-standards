@@ -5,7 +5,6 @@ properties:
       than 512 pixels. The URI reference may be a link or url-encoded data URI RFC 2397.
     type: string
     format: uri
-    x-cds-type: URIString
   title:
     description: Display label for the specific image
     type: string

@@ -3,14 +3,17 @@ properties:
     description: Australian Business Number for the authorised entity
     type: string
     example: "54 624 797 655"
+    format: ABNString
   acn:
     description: Australian Company Number for the authorised entity
     type: string
     example: "624 797 655"
+    format: ACNString
   arbn:
     description: Australian Registered Body Number for the authorised entity
     type: string
     example: "000 000 123"
+    format: ARBNString
   description:
     description: >-
       Description of the authorised entity derived from previously executed

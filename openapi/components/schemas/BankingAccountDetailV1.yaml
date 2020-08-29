@@ -33,7 +33,7 @@ allOf:
           current rate to calculate interest earned being applied to deposit
           balances as it stands at the time of the API call
         type: string
-        x-cds-type: RateString
+        format: RateString
         example: "0.02"
       depositRates:
         description: >-
@@ -58,7 +58,6 @@ allOf:
                     absent. (note this is an additional field appended to the
                     feature object defined in the Product Reference payload)
                   type: boolean
-                  x-cds-type: Boolean
               type: object
           type: object
         type: array
@@ -74,7 +73,7 @@ allOf:
           The current rate to calculate interest payable being applied to
           lending balances as it stands at the time of the API call
         type: string
-        x-cds-type: RateString
+        format: RateString
         example: "0.02"
       lendingRates:
         description: >-

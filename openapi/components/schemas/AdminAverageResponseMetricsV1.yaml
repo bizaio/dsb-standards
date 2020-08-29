@@ -12,9 +12,3 @@ properties:
   unauthenticated:
     $ref: ./AdminTierMetricV1.yaml
 type: object
-x-conditional:
-  - unauthenticated
-  - highPriority
-  - lowPriority
-  - unattended
-  - largePayload

@@ -2,51 +2,48 @@ properties:
   loanEndDate:
     description: Date that the loan is due to be repaid in full
     type: string
-    x-cds-type: DateString
     format: date
   maxRedraw:
     description: >-
       Maximum amount of funds that can be redrawn. If not present redraw is not
       available even if the feature exists for the account
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "1000.00"
   maxRedrawCurrency:
     description: If absent assumes AUD
     type: string
-    x-cds-type: CurrencyString
+    format: CurrencyString
     example: "AUS"
   minInstalmentAmount:
     description: Minimum amount of next instalment
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "122.22"
   minInstalmentCurrency:
     description: If absent assumes AUD
     type: string
-    x-cds-type: CurrencyString
+    format: CurrencyString
     example: "AUD"
   minRedraw:
     description: Minimum redraw amount
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "500.00"
   minRedrawCurrency:
     description: If absent assumes AUD
     type: string
-    x-cds-type: CurrencyString
+    format: CurrencyString
     example: "AUD"
   nextInstalmentDate:
     description: Next date that an instalment is required
     type: string
-    x-cds-type: DateString
     format: date
   offsetAccountEnabled:
     description: >-
       Set to true if one or more offset accounts are configured for this loan
       account
     type: boolean
-    x-cds-type: Boolean
     example: false
   offsetAccountIds:
     description: >-
@@ -58,20 +55,18 @@ properties:
       be accessed under the current authorisation
     items:
       type: string
-      x-cds-type: ASCIIString
     type: array
   originalLoanAmount:
     description: Optional original loan value
     type: string
-    x-cds-type: AmountString
+    format: AmountString
   originalLoanCurrency:
     description: If absent assumes AUD
     type: string
-    x-cds-type: CurrencyString
+    format: CurrencyString
   originalStartDate:
     description: Optional original start date for the loan
     type: string
-    x-cds-type: DateString
     format: date
   repaymentFrequency:
     description: >-
@@ -79,16 +74,9 @@ properties:
       8601 Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
       (excludes recurrence syntax)
     type: string
-    x-cds-type: ExternalRef
+    format: DurationString
   repaymentType:
-    default: PRINCIPAL_AND_INTEREST
-    description: >-
-      Options in place for repayments. If absent defaults to
-      PRINCIPAL_AND_INTEREST
-    enum:
-      - INTEREST_ONLY
-      - PRINCIPAL_AND_INTEREST
-    type: string
+    $ref: ./EnumBankingRepaymentTypeV1.yaml
 required:
   - loanEndDate
   - nextInstalmentDate

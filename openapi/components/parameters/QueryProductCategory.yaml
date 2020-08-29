@@ -6,17 +6,4 @@ description: >-
   accounts returned.
 required: false
 schema:
-  enum:
-    - TRANS_AND_SAVINGS_ACCOUNTS
-    - TERM_DEPOSITS
-    - TRAVEL_CARDS
-    - REGULATED_TRUST_ACCOUNTS
-    - RESIDENTIAL_MORTGAGES
-    - CRED_AND_CHRG_CARDS
-    - PERS_LOANS
-    - MARGIN_LOANS
-    - LEASES
-    - TRADE_FINANCE
-    - OVERDRAFTS
-    - BUSINESS_LOANS
-  type: string
+  $ref: ../schemas/EnumBankingProductCategoryV1.yaml

@@ -1,4 +1,5 @@
-description: The type of fee
+description:
+  $ref: ./EnumBankingFeeTypeV1.md
 enum:
   - PERIODIC
   - TRANSACTION

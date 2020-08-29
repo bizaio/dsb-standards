@@ -31,7 +31,6 @@ properties:
   establishmentDate:
     description: The date the organisation described was established
     type: string
-    x-cds-type: DateString
     format: date
   industryCode:
     description: '[ANZSIC (2006)](http://www.abs.gov.au/anzsic) code for the organisation.'
@@ -41,35 +40,25 @@ properties:
       True if registered with the ACNC.  False if not. Absent or null if not
       confirmed.
     type: boolean
-    x-cds-type: Boolean
   lastUpdateTime:
     description: >-
       The date and time that this record was last updated by the customer. If no
       update has occurred then this date should reflect the initial creation
       date for the data
     type: string
-    x-cds-type: DateTimeString
     format: date-time
   legalName:
     description: 'Legal name, if different to the business name'
     type: string
   organisationType:
-    description: Legal organisation type
-    enum:
-      - SOLE_TRADER
-      - COMPANY
-      - PARTNERSHIP
-      - TRUST
-      - GOVERNMENT_ENTITY
-      - OTHER
-    type: string
+    $ref: ./EnumCommonOrganisationTypeV1.yaml
   registeredCountry:
     description: >-
       Enumeration with values from [ISO 3166
       Alpha-3](https://www.iso.org/iso-3166-country-codes.html) country codes. 
       Assumed to be AUS if absent
     type: string
-    x-cds-type: ExternalRef
+    format: CountryString
   shortName:
     description: 'Short name used for communication, if different to the business name'
     type: string

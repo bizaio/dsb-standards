@@ -1,6 +1,5 @@
-description: >-
-  The type of rate (base, bonus, etc). See the next section for an overview
-  of valid values and their meaning
+description:
+  $ref: ./EnumBankingDepositRateTypeV1.md
 enum:
   - FIXED
   - BONUS

@@ -1,0 +1,12 @@
+description: >-
+  The weekDay specified. The payment will occur on the last occurrence of
+  this weekday in the interval.
+enum:
+  - MON
+  - TUE
+  - WED
+  - THU
+  - FRI
+  - SAT
+  - SUN
+type: string

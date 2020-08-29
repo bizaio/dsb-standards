@@ -5,7 +5,6 @@ properties:
   paymentDate:
     description: The scheduled date for the once off payment
     type: string
-    x-cds-type: DateString
     format: date
 required:
   - paymentDate

@@ -1,6 +1,5 @@
-description: >-
-  The category to which a product or account belongs. See
-  [here](#product-categories) for more details
+description:
+  $ref: ./EnumBankingProductCategoryV1.md
 enum:
   - TRANS_AND_SAVINGS_ACCOUNTS
   - TERM_DEPOSITS

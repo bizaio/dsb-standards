@@ -2,15 +2,12 @@ description: Number of calls resulting in error due to server execution over tim
 properties:
   currentDay:
     description: Number of errors for current day
-    type: number
+    type: integer
     example: 0
   previousDays:
     description: Number of errors for previous days. The first element indicates yesterday and so on. A maximum of seven entries is required if available
     items:
-      type: number
+      type: integer
     type: array
     example: [1,4,8,0,0,22,0]
-x-conditional:
-  - currentDay
-  - previousDays
 type: object

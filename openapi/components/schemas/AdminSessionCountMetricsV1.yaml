@@ -3,15 +3,12 @@ description: Session counts over time. Note that a session is defined as the
 properties:
   currentDay:
     description: Session count for current day
-    type: number
+    type: integer
     example: 134
   previousDays:
     description: Session count for previous days. The first element indicates
       yesterday and so on. A maximum of seven entries is required if available
     items:
-      type: number
+      type: integer
     type: array
     example: [123,111,110,100,88,55,33]
-x-conditional:
-  - currentDay
-  - previousDays

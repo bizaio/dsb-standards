@@ -6,7 +6,6 @@ properties:
   additionalInfoUri:
     description: Link to a web page with more information on this rate
     type: string
-    x-cds-type: URIString
     format: uri
   additionalValue:
     description: >-
@@ -24,7 +23,7 @@ properties:
       Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations) (excludes
       recurrence syntax)
     type: string
-    x-cds-type: ExternalRef
+    format: DurationString
     example: "P30D"
   calculationFrequency:
     description: >-
@@ -35,7 +34,7 @@ properties:
       8601 Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
       (excludes recurrence syntax)
     type: string
-    x-cds-type: ExternalRef
+    format: DurationString
     example: "P1D"
   depositRateType:
     description: >-
@@ -54,7 +53,7 @@ properties:
   rate:
     description: The rate to be applied
     type: string
-    x-cds-type: RateString
+    format: RateString
     example: "0.011"
   tiers:
     description: Rate tiers applicable for this rate

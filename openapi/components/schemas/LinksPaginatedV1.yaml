@@ -4,33 +4,28 @@ properties:
       URI to the first page of this set. Mandatory if this response is not the
       first page
     type: string
-    x-cds-type: URIString
     format: uri
   last:
     description: >-
       URI to the last page of this set. Mandatory if this response is not the
       last page
     type: string
-    x-cds-type: URIString
     format: uri
   next:
     description: >-
       URI to the next page of this set. Mandatory if this response is not the
       last page
     type: string
-    x-cds-type: URIString
     format: uri
   prev:
     description: >-
       URI to the previous page of this set. Mandatory if this response is not
       the first page
     type: string
-    x-cds-type: URIString
     format: uri
   self:
     description: Fully qualified link that generated the current response document
     type: string
-    x-cds-type: URIString
     format: uri
 required:
   - self

@@ -16,26 +16,17 @@ properties:
       extension incorporated. Formatted according to section 5.1.4. of [RFC
       3966](https://www.ietf.org/rfc/rfc3966.txt)
     type: string
-    x-cds-type: ExternalRef
+    format: PhoneNumberString
   isPreferred:
     description: >-
       May be true for one and only one entry to indicate the preferred phone
       number. Assumed to be 'false' if not present
     type: boolean
-    x-cds-type: Boolean
   number:
     description: 'The actual phone number, with leading zeros as appropriate'
     type: string
   purpose:
-    description: The purpose of the number as specified by the customer
-    enum:
-      - MOBILE
-      - HOME
-      - WORK
-      - OTHER
-      - INTERNATIONAL
-      - UNSPECIFIED
-    type: string
+    $ref: ./EnumCommonPhoneNumberPurposeV1.yaml
 required:
   - fullNumber
   - number

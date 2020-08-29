@@ -2,13 +2,12 @@ properties:
   accountId:
     description: ID of the account for which transactions are provided
     type: string
-    x-cds-type: ASCIIString
   amount:
     description: >-
       The value of the transaction. Negative values mean money was outgoing from
       the account
     type: string
-    x-cds-type: AmountString
+    format: AmountString
   apcaNumber:
     description: >-
       6 Digit APCA number for the initiating institution. The field is
@@ -26,7 +25,7 @@ properties:
   currency:
     description: The currency for the transaction amount. AUD assumed if not present
     type: string
-    x-cds-type: CurrencyString
+    format: CurrencyString
   description:
     description: The transaction description as applied by the financial institution
     type: string
@@ -35,14 +34,12 @@ properties:
       The time the transaction was executed by the originating customer, if
       available
     type: string
-    x-cds-type: DateTimeString
     format: date-time
   isDetailAvailable:
     description: >-
       True if extended information is available using the transaction detail end
       point. False if extended data is not available
     type: boolean
-    x-cds-type: Boolean
   merchantCategoryCode:
     description: The merchant category code (or MCC) for an outgoing payment to a merchant
     type: string
@@ -55,7 +52,6 @@ properties:
       transaction has status POSTED.  This is the time that appears on a
       standard statement
     type: string
-    x-cds-type: DateTimeString
     format: date-time
   reference:
     description: >-
@@ -63,14 +59,7 @@ properties:
       Empty string if no data provided
     type: string
   status:
-    description: >-
-      Status of the transaction whether pending or posted. Note that there is
-      currently no provision in the standards to guarantee the ability to
-      correlate a pending transaction with an associated posted transaction
-    enum:
-      - PENDING
-      - POSTED
-    type: string
+    $ref: ./EnumBankingTransactionStatusV1.yaml
   transactionId:
     description: >-
       A unique ID of the transaction adhering to the standards for ID
@@ -78,26 +67,14 @@ properties:
       are specific and justifiable technical reasons why a transaction cannot be
       uniquely identified for a particular account type
     type: string
-    x-cds-type: ASCIIString
   type:
-    description: The type of the transaction
-    enum:
-      - FEE
-      - INTEREST_CHARGED
-      - INTEREST_PAID
-      - TRANSFER_OUTGOING
-      - TRANSFER_INCOMING
-      - PAYMENT
-      - DIRECT_DEBIT
-      - OTHER
-    type: string
+    $ref: ./EnumBankingTransactionTypeV1.yaml
   valueDateTime:
     description: >-
       Date and time at which assets become available to the account owner in
       case of a credit entry, or cease to be available to the account owner in
       case of a debit transaction entry
     type: string
-    x-cds-type: DateTimeString
     format: date-time
 required:
   - accountId

@@ -7,7 +7,7 @@ properties:
       Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations) (excludes
       recurrence syntax)
     type: string
-    x-cds-type: ExternalRef
+    format: DurationString
     example: "P1D"
   accruedRate:
     description: >-
@@ -15,7 +15,7 @@ properties:
       accrued on the account. One of amount, balanceRate, transactionRate and
       accruedRate is mandatory
     type: string
-    x-cds-type: RateString
+    format: RateString
     example: "0.002"
   additionalInfo:
     description: Display text providing more information on the fee
@@ -24,7 +24,6 @@ properties:
   additionalInfoUri:
     description: Link to a web page with more information on this fee
     type: string
-    x-cds-type: URIString
     format: uri
   additionalValue:
     description: >-
@@ -38,19 +37,19 @@ properties:
       The amount charged for the fee. One of amount, balanceRate,
       transactionRate and accruedRate is mandatory
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "10.01"
   balanceRate:
     description: >-
       A fee rate calculated based on a proportion of the balance. One of amount,
       balanceRate, transactionRate and accruedRate is mandatory
     type: string
-    x-cds-type: RateString
+    format: RateString
     example: "0.0023"
   currency:
     description: The currency the fee will be charged in. Assumes AUD if absent
     type: string
-    x-cds-type: CurrencyString
+    format: CurrencyString
     example: "AUD"
   discounts:
     description: An optional list of discounts to this fee that may be available
@@ -58,19 +57,7 @@ properties:
       $ref: ./BankingProductDiscountV1.yaml
     type: array
   feeType:
-    description: The type of fee
-    enum:
-      - PERIODIC
-      - TRANSACTION
-      - WITHDRAWAL
-      - DEPOSIT
-      - PAYMENT
-      - PURCHASE
-      - EVENT
-      - UPFRONT
-      - EXIT
-    type: string
-    example: EXIT
+    $ref: ./EnumBankingFeeTypeV1.yaml
   name:
     description: Name of the fee
     type: string
@@ -80,7 +67,7 @@ properties:
       A fee rate calculated based on a proportion of a transaction. One of
       amount, balanceRate, transactionRate and accruedRate is mandatory
     type: string
-    x-cds-type: RateString
+    format: RateString
     example: "0.0023"
 required:
   - feeType

@@ -3,15 +3,17 @@
   "version": "1.3.0",
   "dependencies": {
     "@redocly/openapi-cli": "^0.12.16",
-    "api-spec-converter": "git+https://github.com/LucyBot-Inc/api-spec-converter.git",
+    "api-spec-converter": "^2.11.2",
+    "core-js": "^3.6.5",
     "deploy-to-gh-pages": "^1.3.7",
-    "redoc": "^2.0.0-rc.39",
-    "redoc-cli": "^0.9.11"
+    "redoc": "^2.0.0-rc.40",
+    "redoc-cli": "^0.9.12",
+    "styled-components": "^5.1.1"
   },
   "private": true,
   "scripts": {
     "start": "openapi preview-docs",
-    "build": "openapi bundle --ext json -o dist && openapi bundle --ext yaml -o dist && api-spec-converter dist/openapi.json --from=openapi_3 --to=swagger_2 > dist/swagger2.json",
+    "build": "node scripts/produce-model-markdown.js && openapi bundle --ext json -o dist && openapi bundle --ext yaml -o dist && api-spec-converter dist/openapi.json --from=openapi_3 --to=swagger_2 > dist/swagger2.json",
     "deploy": "npm run build && cp dist/* web && deploy-to-gh-pages --update web",
     "test": "openapi validate"
   }

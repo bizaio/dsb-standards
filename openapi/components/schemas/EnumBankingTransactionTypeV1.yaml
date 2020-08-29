@@ -1,0 +1,11 @@
+description: The type of the transaction
+enum:
+  - FEE
+  - INTEREST_CHARGED
+  - INTEREST_PAID
+  - TRANSFER_OUTGOING
+  - TRANSFER_INCOMING
+  - PAYMENT
+  - DIRECT_DEBIT
+  - OTHER
+type: string

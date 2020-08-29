@@ -10,7 +10,7 @@ properties:
       Swift bank code.  Aligns with standard [ISO
       9362](https://www.iso.org/standard/60390.html)
     type: string
-    x-cds-type: ExternalRef
+    format: SwiftBankString
     example: "ACMEAUSYHOM"
   chipNumber:
     description: Number for the Clearing House Interbank Payments System
@@ -21,7 +21,7 @@ properties:
       Country of the recipient institution. A valid [ISO 3166
       Alpha-3](https://www.iso.org/iso-3166-country-codes.html) country code
     type: string
-    x-cds-type: ExternalRef
+    format: CountryString
     example: "AUS"
   fedWireNumber:
     description: Number for Fedwire payment (Federal Reserve Wire Network)
@@ -32,7 +32,7 @@ properties:
       The legal entity identifier (LEI) for the beneficiary.  Aligns with [ISO
       17442](https://www.iso.org/standard/59771.html)
     type: string
-    x-cds-type: ExternalRef
+    format: LegalEntityString
     example: "549300TGFLH2QZV80T70"
   routingNumber:
     description: International bank routing number

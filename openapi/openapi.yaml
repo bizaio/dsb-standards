@@ -6,9 +6,7 @@ info:
   description: >
     This specification mirrors the definitions of the Australian Consumer Data Standards and is intended to deliver the Standards in OpenAPI 3 format with additional data specifications.
 
-
     The source for this Redocs is available at [https://github.com/bizaio/dsb-standards](https://github.com/bizaio/dsb-standards).
-
 
     A downgraded Swagger 2 version of this document can be [downloaded here](http://bizaio.github.io/dsb-standards/swagger2.json).
   license:
@@ -87,6 +85,15 @@ tags:
     description: "Scheduled Payments APIs"
   - name: Transactions
     description: "Transactions APIs"
+  - name: Schemas
+    description:
+      $ref: ./openapi-schemas.md
+  - name: Enumerations
+    description:
+      $ref: ./openapi-enumerations.md
+  - name: Responses
+    description:
+      $ref: ./openapi-responses.md
 x-tagGroups:
   - name: "Banking APIs"
     tags: ["Accounts", "Balances", "Direct Debits", "Payees", "Products", "Scheduled Payments", "Transactions"]
@@ -94,6 +101,8 @@ x-tagGroups:
     tags: ["Customer", "Discovery"]
   - name: "Admin APIs"
     tags: ["Register", "Metrics"]
+  - name: "Models"
+    tags: [ "Schemas", "Enumerations", "Responses" ]
 components:
   securitySchemes:
     CDRAuth:

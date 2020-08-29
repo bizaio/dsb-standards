@@ -1,0 +1,5 @@
+description: Current instructions on action to be taken at maturity
+enum:
+  - ROLLED_OVER
+  - PAID_OUT_AT_MATURITY
+type: string

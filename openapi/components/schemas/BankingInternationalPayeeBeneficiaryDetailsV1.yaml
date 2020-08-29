@@ -4,7 +4,7 @@ properties:
       Country where the beneficiary resides. A valid [ISO 3166
       Alpha-3](https://www.iso.org/iso-3166-country-codes.html) country code
     type: string
-    x-cds-type: ExternalRef
+    format: CountryString
     example: "AUS"
   message:
     description: Response message for the payment

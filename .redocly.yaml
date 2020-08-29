@@ -6,6 +6,9 @@ lint:
     no-unused-schemas: warning
 referenceDocs:
   htmlTemplate: ./docs/index.html
+  jsonSampleExpandLevel: 3
+  expandResponses: "200,201"
+  pathInMiddlePanel:  true
   theme:
     colors:
       primary:

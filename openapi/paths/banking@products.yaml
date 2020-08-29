@@ -3,8 +3,7 @@ get:
     Obtain a list of products that are currently openly offered to the market
 
 
-    Note that the results returned by this end point are expected to be ordered
-    according to updated-since
+    Note that the results returned by this end point are expected to be ordered in descending order according to `lastUpdated`
 
 
     ### Conventions
@@ -110,9 +109,6 @@ get:
 
     NOTE: This version must be implemented by **February 2021**
 
-
-    Obsolete versions: [v1](includes/obsolete/get-products-v1.html)
-    [v2](includes/obsolete/get-products-v2.html)
   operationId: listProducts
   parameters:
     - $ref: ../components/parameters/QueryProductEffective.yaml

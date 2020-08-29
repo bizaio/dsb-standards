@@ -2,16 +2,13 @@ description: Transactions per second over time
 properties:
   currentDay:
     description: Average TPS for current day
-    type: number
+    type: integer
     example: 234
   previousDays:
     description: Average TPS for previous days. The first element indicates
       yesterday and so on. A maximum of seven entries is required if available
     items:
-      type: number
+      type: integer
     type: array
     example: [123,99,33,44,77,88,103]
-x-conditional:
-  - currentDay
-  - previousDays
 type: object

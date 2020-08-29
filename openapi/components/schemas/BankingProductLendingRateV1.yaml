@@ -6,7 +6,6 @@ properties:
   additionalInfoUri:
     description: Link to a web page with more information on this rate
     type: string
-    x-cds-type: URIString
     format: uri
   additionalValue:
     description: >-
@@ -24,7 +23,7 @@ properties:
       Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations) (excludes
       recurrence syntax)
     type: string
-    x-cds-type: ExternalRef
+    format: DurationString
     example: "P1D"
   calculationFrequency:
     description: >-
@@ -35,63 +34,26 @@ properties:
       8601 Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations)
       (excludes recurrence syntax)
     type: string
-    x-cds-type: ExternalRef
+    format: DurationString
     example: "P30D"
   comparisonRate:
     description: A comparison rate equivalent for this rate
     type: string
-    x-cds-type: RateString
+    format: RateString
     example: "0.002"
   interestPaymentDue:
-    description: >-
-      When loan payments are due to be paid within each period. The investment
-      benefit of earlier payments affect the rate that can be offered
-    enum:
-      - IN_ARREARS
-      - IN_ADVANCE
-    type: string
-    example: IN_ADVANCE
+    $ref: ./EnumBankingInterestPaymentDueV1.yaml
   lendingRateType:
-    description: >-
-      The type of rate (fixed, variable, etc). See the next section for an
-      overview of valid values and their meaning
-    enum:
-      - FIXED
-      - VARIABLE
-      - INTRODUCTORY
-      - DISCOUNT
-      - PENALTY
-      - FLOATING
-      - MARKET_LINKED
-      - CASH_ADVANCE
-      - PURCHASE
-      - BUNDLE_DISCOUNT_FIXED
-      - BUNDLE_DISCOUNT_VARIABLE
-    type: string
-    example: PURCHASE
+    $ref: ./EnumBankingLendingRateTypeV1.yaml
   loanPurpose:
-    description: >-
-      The reason for taking out the loan. If absent, the lending rate is
-      applicable to all loan purposes
-    enum:
-      - OWNER_OCCUPIED
-      - INVESTMENT
-    type: string
-    example: OWNER_OCCUPIED
+    $ref: ./EnumBankingLoanPurposeV1.yaml
   rate:
     description: The rate to be applied
     type: string
-    x-cds-type: RateString
+    format: RateString
     example: "0.0023"
   repaymentType:
-    description: >-
-      Options in place for repayments. If absent, the lending rate is applicable
-      to all repayment types
-    enum:
-      - INTEREST_ONLY
-      - PRINCIPAL_AND_INTEREST
-    type: string
-    example: INTEREST_ONLY
+    $ref: ./EnumBankingRepaymentTypeV1.yaml
   tiers:
     description: Rate tiers applicable for this rate
     items:

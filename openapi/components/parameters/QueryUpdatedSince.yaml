@@ -6,4 +6,5 @@ name: updated-since
 required: false
 schema:
   type: string
-x-cds-type: DateTimeString
+  format: date-time
+

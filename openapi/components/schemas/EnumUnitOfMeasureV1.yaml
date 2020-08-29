@@ -1,0 +1,11 @@
+description: >-
+  The unit of measure that applies to the tierValueMinimum and
+  tierValueMaximum values e.g. a **DOLLAR** amount. **PERCENT** (in the case
+  of loan-to-value ratio or LVR). Tier term period representing a discrete
+  number of **MONTH**'s or **DAY**'s (in the case of term deposit tiers)
+enum:
+  - DOLLAR
+  - PERCENT
+  - MONTH
+  - DAY
+type: string

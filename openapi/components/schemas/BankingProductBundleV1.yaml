@@ -8,7 +8,6 @@ properties:
       Link to a web page with more information on the bundle criteria and
       benefits
     type: string
-    x-cds-type: URIString
     format: uri
   description:
     description: Description of the bundle
@@ -27,8 +26,6 @@ properties:
       via the product reference end points
     items:
       type: string
-      x-cds-type: ASCIIString
-      format: uuid
     type: array
 required:
   - description

@@ -1,0 +1,9 @@
+description: The purpose of the number as specified by the customer
+enum:
+  - MOBILE
+  - HOME
+  - WORK
+  - OTHER
+  - INTERNATIONAL
+  - UNSPECIFIED
+type: string

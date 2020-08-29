@@ -1,0 +1,9 @@
+description: >-
+  The method used to calculate the amount to be applied using one or more
+  tiers. A single rate may be applied to the entire balance or each
+  applicable tier rate is applied to the portion of the balance that falls
+  into that tier (referred to as 'bands' or 'steps')
+enum:
+- WHOLE_BALANCE
+- PER_TIER
+type: string

@@ -13,7 +13,6 @@ properties:
       no update has occurred then this date should reflect the initial creation
       date for the data
     type: string
-    x-cds-type: DateTimeString
     format: date-time
   middleNames:
     description: Field is mandatory but array may be empty

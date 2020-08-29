@@ -18,7 +18,7 @@ properties:
       Alpha-3](https://www.iso.org/iso-3166-country-codes.html) country code.
       Australia (AUS) is assumed if country is not present.
     type: string
-    x-cds-type: ExternalRef
+    format: CountryString
   mailingName:
     description: >-
       Name of the individual or business formatted for inclusion in an address

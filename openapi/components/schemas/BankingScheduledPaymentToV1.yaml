@@ -7,7 +7,6 @@ properties:
       Present if toUType is set to accountId. Indicates that the payment is to
       another account that is accessible under the current consent
     type: string
-    x-cds-type: ASCIIString
   biller:
     $ref: ./BankingBillerPayeeV1.yaml
   domestic:
@@ -21,7 +20,6 @@ properties:
       Bank Payees scope has not been consented to then a payeeId should not be
       provided and the full payee details should be provided instead
     type: string
-    x-cds-type: ASCIIString
   toUType:
     description: >-
       The type of object provided that specifies the destination of the funds

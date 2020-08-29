@@ -2,7 +2,6 @@ properties:
   creationDate:
     description: The date the payee was created by the customer
     type: string
-    x-cds-type: DateString
     format: date
   description:
     description: A description of the payee provided by the customer
@@ -13,19 +12,8 @@ properties:
   payeeId:
     description: ID of the payee adhering to the rules of ID permanence
     type: string
-    x-cds-type: ASCIIString
-    format: uuid
   type:
-    description: >-
-      The type of payee. DOMESTIC means a registered payee for domestic payments
-      including NPP. INTERNATIONAL means a registered payee for international
-      payments. BILLER means a registered payee for BPAY
-    enum:
-      - DOMESTIC
-      - INTERNATIONAL
-      - BILLER
-    type: string
-    example: BILLER
+    $ref: ./EnumBankingPayeeTypeV1.yaml
 required:
   - nickname
   - payeeId

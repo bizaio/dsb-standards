@@ -2,33 +2,31 @@ properties:
   accountId:
     description: A unique ID of the account adhering to the standards for ID permanence
     type: string
-    x-cds-type: ASCIIString
-    format: uuid
   amortisedLimit:
     description: >-
       Object representing the available limit amortised according to payment
       schedule. Assumed to be zero if absent
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "10.00"
   availableBalance:
     description: >-
       Balance representing the amount of funds available for transfer. Assumed
       to be zero or positive
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "10.00"
   creditLimit:
     description: >-
       Object representing the maximum amount of credit that is available for
       this account. Assumed to be zero if absent
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "10.00"
   currency:
     description: The currency for the balance amounts. If absent assumed to be AUD
     type: string
-    x-cds-type: CurrencyString
+    format: CurrencyString
     example: "AUD"
   currentBalance:
     description: >-
@@ -36,7 +34,7 @@ properties:
       available via other channels such as Internet Banking. Assumed to be
       negative if the customer has money owing
     type: string
-    x-cds-type: AmountString
+    format: AmountString
     example: "10.00"
   purses:
     description: >-

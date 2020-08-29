@@ -1,0 +1,17 @@
+description: >-
+  $ref: ./EnumBankingProductEligibilityTypeV1.md
+enum:
+  - BUSINESS
+  - PENSION_RECIPIENT
+  - MIN_AGE
+  - MAX_AGE
+  - MIN_INCOME
+  - MIN_TURNOVER
+  - STAFF
+  - STUDENT
+  - EMPLOYMENT_STATUS
+  - RESIDENCY_STATUS
+  - NATURAL_PERSON
+  - OTHER
+type: string
+example: MIN_TURNOVER
