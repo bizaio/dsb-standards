@@ -6,7 +6,7 @@ The result of this repository is published at [https://bizaio.github.io/dsb-stan
 
 ## Current Status
 
-We believe this documentation is currently up to date with **1.3.1** of the Standards with respect to the payloads.
+We believe this documentation is currently up to date with **1.4.0** of the Standards with respect to the payloads.
 
 We have not currently transferred auxiliary documentation outside of payloads.
 

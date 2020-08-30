@@ -1,0 +1,15 @@
+description:
+  $ref: ./EnumBankingFeeTypeV2.md
+enum:
+  - PERIODIC
+  - TRANSACTION
+  - WITHDRAWAL
+  - DEPOSIT
+  - PAYMENT
+  - PURCHASE
+  - EVENT
+  - UPFRONT
+  - EXIT
+  - VARIABLE
+type: string
+example: EXIT

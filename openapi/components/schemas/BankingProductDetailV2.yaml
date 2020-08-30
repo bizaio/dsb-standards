@@ -40,6 +40,6 @@ allOf:
       lendingRates:
         description: Interest rates charged against lending balances
         items:
-          $ref: ./BankingProductLendingRateV1.yaml
+          $ref: ./BankingProductLendingRateV2.yaml
         type: array
     type: object

@@ -35,11 +35,11 @@ allOf:
       fees:
         description: Fees applicable for the product
         items:
-          $ref: ./BankingProductFeeV1.yaml
+          $ref: ./BankingProductFeeV2.yaml
         type: array
       lendingRates:
         description: Interest rates charged against lending balances
         items:
-          $ref: ./BankingProductLendingRateV2.yaml
+          $ref: ./BankingProductLendingRateV3.yaml
         type: array
     type: object

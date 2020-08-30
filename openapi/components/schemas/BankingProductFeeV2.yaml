@@ -57,7 +57,7 @@ properties:
       $ref: ./BankingProductDiscountV1.yaml
     type: array
   feeType:
-    $ref: ./EnumBankingFeeTypeV1.yaml
+    $ref: ./EnumBankingFeeTypeV2.yaml
   name:
     description: Name of the fee
     type: string

@@ -1,5 +1,12 @@
 description: Defines the criteria and conditions for which a rate applies
 properties:
+  additionalInfo:
+    description: Display text providing more information on the rate tier.
+    type: string
+  additionalInfoUri:
+    description: Link to a web page with more information on this rate tier
+    type: string
+    format: uri
   applicabilityConditions:
     $ref: ./BankingProductRateConditionV1.yaml
   maximumValue:
