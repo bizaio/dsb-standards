@@ -1,5 +1,5 @@
 description:
-  $ref: EnumBankingProductCategoryV1.md
+  $ref: https://raw.githubusercontent.com/bizaio/dsb-standards/master/openapi/components/schemas/EnumBankingProductCategoryV1.md
 enum:
   - TRANS_AND_SAVINGS_ACCOUNTS
   - TERM_DEPOSITS
