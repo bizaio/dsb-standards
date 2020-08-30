@@ -1,5 +1,5 @@
 description:
-  $ref: ./EnumBankingFeeTypeV2.md
+  $ref: ./EnumBankingProductFeeTypeV2.md
 enum:
   - PERIODIC
   - TRANSACTION
