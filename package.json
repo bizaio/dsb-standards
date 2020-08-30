@@ -6,6 +6,7 @@
     "api-spec-converter": "^2.11.2",
     "core-js": "^3.6.5",
     "deploy-to-gh-pages": "^1.3.7",
+    "mem": "^6.1.1",
     "redoc": "^2.0.0-rc.40",
     "redoc-cli": "^0.9.12",
     "styled-components": "^5.1.1"
