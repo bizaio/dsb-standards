@@ -1,5 +1,5 @@
 description: >-
-  $ref: ./EnumBankingProductEligibilityTypeV1.md
+  $ref: EnumBankingProductEligibilityTypeV1.md
 enum:
   - BUSINESS
   - PENSION_RECIPIENT

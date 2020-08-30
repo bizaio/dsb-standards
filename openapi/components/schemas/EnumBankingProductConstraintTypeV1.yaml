@@ -1,5 +1,5 @@
 description:
-  $ref: ./EnumBankingProductConstraintTypeV1.md
+  $ref: EnumBankingProductConstraintTypeV1.md
 enum:
   - MIN_BALANCE
   - MAX_BALANCE

@@ -1,5 +1,5 @@
 description:
-  $ref: ./EnumBankingProductFeatureTypeV1.md
+  $ref: EnumBankingProductFeatureTypeV1.md
 enum:
   - CARD_ACCESS
   - ADDITIONAL_CARDS

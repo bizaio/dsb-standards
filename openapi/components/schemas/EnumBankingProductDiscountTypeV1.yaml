@@ -1,5 +1,5 @@
 description:
-  $ref: ./EnumBankingProductDiscountTypeV1.md
+  $ref: EnumBankingProductDiscountTypeV1.md
 enum:
   - BALANCE
   - DEPOSITS

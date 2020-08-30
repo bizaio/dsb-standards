@@ -1,5 +1,5 @@
 description:
-  $ref: ./EnumBankingDepositRateTypeV1.md
+  $ref: EnumBankingDepositRateTypeV1.md
 enum:
   - FIXED
   - BONUS

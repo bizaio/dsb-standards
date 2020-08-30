@@ -1,5 +1,5 @@
 description:
-  $ref: ./EnumBankingLendingRateTypeV1.md
+  $ref: EnumBankingLendingRateTypeV1.md
 enum:
   - FIXED
   - VARIABLE
