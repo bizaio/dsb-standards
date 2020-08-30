@@ -16,6 +16,6 @@
     "start": "openapi preview-docs",
     "build": "node scripts/produce-model-markdown.js && openapi bundle --ext json -o dist && openapi bundle --ext yaml -o dist && api-spec-converter dist/openapi.json --from=openapi_3 --to=swagger_2 > dist/swagger2.json",
     "deploy": "npm run build && cp dist/* web && deploy-to-gh-pages --update web",
-    "test": "openapi validate"
+    "test": "node scripts/produce-model-markdown.js && openapi validate"
   }
 }
