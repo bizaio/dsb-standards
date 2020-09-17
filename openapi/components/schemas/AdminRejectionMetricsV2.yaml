@@ -1,0 +1,6 @@
+description: Number of calls rejected due to traffic thresholds over time
+properties:
+  authenticated:
+    $ref: ./AdminRejectionMetricV1.yaml
+  unauthenticated:
+    $ref: ./AdminRejectionMetricV1.yaml

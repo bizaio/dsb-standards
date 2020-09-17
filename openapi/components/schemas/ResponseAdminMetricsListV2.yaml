@@ -25,7 +25,7 @@ properties:
           time of the call
         type: integer
       rejections:
-        $ref: './AdminRejectionMetricsV1.yaml'
+        $ref: './AdminRejectionMetricsV2.yaml'
       requestTime:
         description: The date and time that the metrics in this payload were requested.
         type: string

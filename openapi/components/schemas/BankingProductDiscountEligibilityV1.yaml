@@ -1,6 +1,6 @@
 properties:
   additionalInfo:
-    description: Display text providing more information on this eligibility constraint
+    description: Display text providing more information on this eligibility constraint. Whether mandatory or not is dependent on the value of discountEligibilityType.
     type: string
     example: "Eligibility criteria explanation"
   additionalInfoUri:
