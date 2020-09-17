@@ -1,0 +1,14 @@
+description: Number of calls rejected due to traffic thresholds over time
+properties:
+  currentDay:
+    description: Number of calls rejected for current day
+    type: integer
+    example: 235
+  previousDays:
+    description: Number of calls rejected for previous days. The first element
+      indicates yesterday and so on. A maximum of seven entries is required
+      if available.
+    items:
+      type: integer
+    type: array
+    example: [288,212,145,183,104,234,291]

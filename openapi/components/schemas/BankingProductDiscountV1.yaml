@@ -28,8 +28,7 @@ properties:
     example: "Type specific value, see docs"
   amount:
     description: >-
-      Value of the discount. When following properties include one of amount,
-      balanceRate, transactionRate, accruedRate and feeRate is mandatory
+      Dollar value of the discount. One of amount, balanceRate, transactionRate, accruedRate and feeRate is mandatory.
     type: string
     format: AmountString
     example: "11.00"
@@ -50,7 +49,7 @@ properties:
   discountType:
     $ref: ./EnumBankingProductDiscountTypeV1.yaml
   eligibility:
-    description: Eligibility constraints that apply to this discount
+    description: Eligibility constraints that apply to this discount. Mandatory if discountType is ELIGIBILITY_ONLY.
     items:
       $ref: ./BankingProductDiscountEligibilityV1.yaml
     type: array

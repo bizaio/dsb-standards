@@ -21,9 +21,10 @@ properties:
     type: array
   occupationCode:
     description: >-
-      Value is a valid [ANZSCO v1.2](http://www.abs.gov.au/ANZSCO) Standard
-      Occupation classification.
+      Value is a valid ANZSCO Standard Occupation classification code. If the occupation code held by the data holder is not one of the supported ANZSCO versions, then it must not be supplied.
     type: string
+  occupationCodeVersion:
+    $ref: ./EnumCommonOccupationCodeVersionV1.yaml
   prefix:
     description: >-
       Also known as title or salutation.  The prefix to the name (e.g. Mr, Mrs,

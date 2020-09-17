@@ -4,6 +4,7 @@ content:
     schema:
       oneOf:
         - $ref: ../schemas/ResponseAdminMetricsListV1.yaml
+        - $ref: ../schemas/ResponseAdminMetricsListV2.yaml
 headers:
   x-v:
     $ref: ../headers/XV.yaml

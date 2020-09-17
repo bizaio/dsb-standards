@@ -33,8 +33,10 @@ properties:
     type: string
     format: date
   industryCode:
-    description: '[ANZSIC (2006)](http://www.abs.gov.au/anzsic) code for the organisation.'
+    description: A valid ANZSIC code for the organisation. If the industry code held by the data holder is not one of the supported ANZSIC versions, then it must not be supplied.
     type: string
+  industryCodeVersion:
+    $ref: ./EnumCommonIndustryCodeVersionV1.yaml
   isACNCRegistered:
     description: >-
       True if registered with the ACNC.  False if not. Absent or null if not

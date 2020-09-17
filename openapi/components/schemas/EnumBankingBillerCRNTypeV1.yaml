@@ -1,0 +1,10 @@
+description: >-
+  Denotes the type of CRN. FIXED_CRN A unique reference number such as a credit card or a fixed reference number
+  identifying a customer's account that does not change with each bill. VARIABLE_CRN Biller generated reference number
+  provided to the customer that is unique to each bill. INTELLIGENT_CRN Biller generated reference number provided to
+  the customer that is unique to each bill which fixes the amount of the bill being paid, expiry date or both.
+enum:
+  - FIXED_CRN
+  - VARIABLE_CRN
+  - INTELLIGENT_CRN
+type: string

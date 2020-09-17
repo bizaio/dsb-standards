@@ -7,7 +7,7 @@ properties:
     description: A description of the payee provided by the customer
     type: string
   nickname:
-    description: The short display name of the payee as provided by the customer
+    description: The short display name of the payee as provided by the customer. Where a customer has not provided a nickname, a display name derived by the bank for the payee consistent with existing digital banking channels.
     type: string
   payeeId:
     description: ID of the payee adhering to the rules of ID permanence
