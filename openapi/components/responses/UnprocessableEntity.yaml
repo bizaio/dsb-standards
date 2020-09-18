@@ -4,8 +4,7 @@ description: >-
 content:
   application/json:
     schema:
-      oneOf:
-        - $ref: ../schemas/ResponseErrorListV1.yaml
+      $ref: ../schemas/ResponseErrorListV1.yaml
 headers:
   x-fapi-interaction-id:
     $ref: ../headers/XFAPIInteractionId.yaml
