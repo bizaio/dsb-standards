@@ -10,8 +10,8 @@ info:
 
     A downgraded Swagger 2 version of this document can be [downloaded here](http://bizaio.github.io/dsb-standards/swagger2.json).
   license:
-    name: MIT License
-    url: 'https://opensource.org/licenses/MIT'
+    name: GPL 3.0
+    url: 'https://opensource.org/licenses/GPL-3.0'
   title: Consumer Data Standards (Biza.io Edition)
   version: 1.5.0
 openapi: 3.0.0
