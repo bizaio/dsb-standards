@@ -1,0 +1,25 @@
+get:
+  description: >-
+    Obtain detailed information on a single payee.
+    Note that the payee sub-structure should be selected to represent the
+    payment destination only rather than any known characteristics of the
+    payment recipient
+  operationId: getPayeeDetail
+  parameters:
+    - $ref: ../components/parameters/PathPayeeId.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/GetPayeeDetail.yaml
+  summary: Get Payee Detail
+  tags:
+    - Banking
+    - Payees
+  security:
+    - CDRAuth: ['bank:payees:read']
+  x-version: '1'

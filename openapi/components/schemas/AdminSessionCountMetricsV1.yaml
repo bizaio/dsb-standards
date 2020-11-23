@@ -1,0 +1,15 @@
+description: Session counts over time. Note that a session is defined as the
+  provisioning of an Access Token.
+properties:
+  currentDay:
+    description: Session count for current day
+    type: number
+  previousDays:
+    description: Session count for previous days. The first element indicates
+      yesterday and so on. A maximum of seven entries is required if available
+    items:
+      type: number
+    type: array
+x-conditional:
+  - currentDay
+  - previousDays

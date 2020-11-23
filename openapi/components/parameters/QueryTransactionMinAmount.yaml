@@ -1,0 +1,9 @@
+description: >-
+  Filter transactions to only transactions with amounts higher or equal to than
+  this amount
+in: query
+name: min-amount
+required: false
+schema:
+  type: string
+x-cds-type: AmountString

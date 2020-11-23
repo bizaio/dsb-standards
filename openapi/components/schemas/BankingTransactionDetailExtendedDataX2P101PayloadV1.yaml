@@ -1,0 +1,16 @@
+properties:
+  endToEndId:
+    description: An end to end ID for the payment created at initiation
+    type: string
+  extendedDescription:
+    description: >-
+      An extended string description. Only present if specified by the
+      extensionUType field
+    type: string
+  purposeCode:
+    description: >-
+      Purpose of the payment.  Format is defined by NPP standards for the
+      x2p1.01 overlay service
+    type: string
+required:
+  - extendedDescription

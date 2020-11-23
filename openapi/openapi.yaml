@@ -1,0 +1,97 @@
+info:
+  contact:
+    email: cdr-data61@csiro.au
+    name: Consumer Data Standards
+    url: 'https://consumerdatastandards.org.au/'
+  description: >-
+    API sets created by the Australian Consumer Data Standards to meet the needs
+    of the Consumer Data Right
+  license:
+    name: MIT License
+    url: 'https://opensource.org/licenses/MIT'
+  title: Consumer Data Standards
+  version: 1.3.0
+openapi: 3.0.0
+paths:
+  /banking/accounts:
+    $ref: paths/banking@accounts.yaml
+  /banking/accounts/balances:
+    $ref: paths/banking@accounts@balances.yaml
+  /banking/accounts/direct-debits:
+    $ref: paths/banking@accounts@direct-debits.yaml
+  '/banking/accounts/{accountId}':
+    $ref: paths/banking@accounts@{accountId}.yaml
+  '/banking/accounts/{accountId}/balance':
+    $ref: paths/banking@accounts@{accountId}@balance.yaml
+  '/banking/accounts/{accountId}/direct-debits':
+    $ref: paths/banking@accounts@{accountId}@direct-debits.yaml
+  '/banking/accounts/{accountId}/payments/scheduled':
+    $ref: paths/banking@accounts@{accountId}@payments@scheduled.yaml
+  '/banking/accounts/{accountId}/transactions':
+    $ref: paths/banking@accounts@{accountId}@transactions.yaml
+  '/banking/accounts/{accountId}/transactions/{transactionId}':
+    $ref: paths/banking@accounts@{accountId}@transactions@{transactionId}.yaml
+  /banking/payees:
+    $ref: paths/banking@payees.yaml
+  '/banking/payees/{payeeId}':
+    $ref: paths/banking@payees@{payeeId}.yaml
+  /banking/payments/scheduled:
+    $ref: paths/banking@payments@scheduled.yaml
+  /banking/products:
+    $ref: paths/banking@products.yaml
+  '/banking/products/{productId}':
+    $ref: paths/banking@products@{productId}.yaml
+  /common/customer:
+    $ref: paths/common@customer.yaml
+  /common/customer/detail:
+    $ref: paths/common@customer@detail.yaml
+  /discovery/outages:
+    $ref: paths/discovery@outages.yaml
+  /discovery/status:
+    $ref: paths/discovery@status.yaml
+  /admin/metrics:
+    $ref: paths/admin@metrics.yaml
+  /admin/register/metadata:
+    $ref: paths/admin@register@metadata.yaml
+tags:
+  - name: Admin
+    description: "Admin APIs"
+  - name: Accounts
+    description: "Accounts Related APIs"
+  - name: Common
+    description: "Common APIs"
+  - name: Customer
+    description: "Customer APIs"
+  - name: Discovery
+    description: "Discovery APIs"
+  - name: Banking
+    description: "Banking APIs"
+  - name: Direct Debits
+    description: "Direct Debits APIs"
+  - name: Metrics
+    description: "Metrics APIs"
+  - name: Payees
+    description: "Payee APIs"
+  - name: Products
+    description: "Products"
+  - name: Register
+    description: "Register APIs"
+  - name: Banking Products
+    description: "Banking Products"
+  - name: Scheduled Payments
+    description: "Scheduled Payments APIs"
+x-tagGroups:
+  - name: "Banking APIs"
+    tags: ["Accounts", "Direct Debits", "Payees", "Banking Products", "Scheduled Payments"]
+  - name: "Common APIs"
+    tags: ["Customer", "Discovery"]
+  - name: "Admin APIs"
+    tags: ["Register", "Metrics"]
+components:
+  securitySchemes:
+    CDRAuth:
+      $ref: ./components/securitySchemes/CDRAuth.yaml
+    RegisterAuth:
+      $ref: ./components/securitySchemes/RegisterAuth.yaml
+servers:
+  - url: 'https://data.holder.com.au/cds-au/v1'

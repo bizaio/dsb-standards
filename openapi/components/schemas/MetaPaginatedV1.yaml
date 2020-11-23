@@ -1,0 +1,15 @@
+properties:
+  totalPages:
+    description: 'The total number of pages in the full set. See [pagination](#pagination).'
+    type: integer
+    x-cds-type: NaturalNumber
+  totalRecords:
+    description: >-
+      The total number of records in the full set. See
+      [pagination](#pagination).
+    type: integer
+    x-cds-type: NaturalNumber
+required:
+  - totalPages
+  - totalRecords
+type: object

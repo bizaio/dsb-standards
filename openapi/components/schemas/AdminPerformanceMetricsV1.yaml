@@ -1,0 +1,17 @@
+description: Percentage of calls within the performance thresholds
+properties:
+  currentDay:
+    description: Percentage of calls within the performance threshold for the
+      current day. 0.0 means 0%. 1.0 means 100%
+    type: number
+  previousDays:
+    description: Percentage of calls within the performance threshold for previous
+      days. The first element indicates yesterday and so on. A maximum of seven
+      entries is required if available. 0.0 means 0%. 1.0 means 100%
+    items:
+      type: number
+    type: array
+type: object
+x-conditional:
+  - currentDay
+  - previousDays

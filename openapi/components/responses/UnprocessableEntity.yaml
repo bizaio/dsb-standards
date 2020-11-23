@@ -1,0 +1,11 @@
+description: >-
+  The request was well formed but was unable to be processed due to
+  business logic specific to the request
+content:
+  application/json:
+    schema:
+      oneOf:
+        - $ref: ../schemas/ResponseErrorListV1.yaml
+headers:
+  x-fapi-interaction-id:
+    $ref: ../headers/XFAPIInteractionId.yaml

@@ -1,0 +1,17 @@
+properties:
+  addressUType:
+    description: The type of address object present
+    enum:
+      - simple
+      - paf
+    type: string
+  paf:
+    $ref: ./CommonPAFAddressV1.yaml
+  simple:
+    $ref: ./CommonSimpleAddressV1.yaml
+required:
+  - addressUType
+type: object
+x-conditional:
+  - simple
+  - paf

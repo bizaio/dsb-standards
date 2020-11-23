@@ -1,0 +1,10 @@
+description: >-
+  Constrain the transaction history request to transactions with effective time
+  at or before this date/time.  If absent defaults to today.  Format is aligned
+  to DateTimeString common type
+in: query
+name: newest-time
+required: false
+schema:
+  type: string
+x-cds-type: DateTimeString

@@ -1,0 +1,11 @@
+description: >-
+  Indicates that the payment is a once off payment on a specific future date.
+  Mandatory if recurrenceUType is set to onceOff
+properties:
+  paymentDate:
+    description: The scheduled date for the once off payment
+    type: string
+    x-cds-type: DateString
+required:
+  - paymentDate
+type: object

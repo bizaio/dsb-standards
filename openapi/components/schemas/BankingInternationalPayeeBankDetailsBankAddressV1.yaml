@@ -1,0 +1,10 @@
+properties:
+  address:
+    description: Address of the recipient Bank
+    type: string
+  name:
+    description: Name of the recipient Bank
+    type: string
+required:
+  - address
+  - name

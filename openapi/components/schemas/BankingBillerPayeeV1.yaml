@@ -1,0 +1,19 @@
+properties:
+  billerCode:
+    description: BPAY Biller Code of the Biller
+    type: string
+  billerName:
+    description: Name of the Biller
+    type: string
+  crn:
+    description: >-
+      BPAY CRN of the Biller. If the contents of the CRN match the format of a
+      Credit Card PAN then it should be masked using the rules applicable for
+      the MaskedPANString common type
+    type: string
+required:
+  - billerCode
+  - billerName
+type: object
+x-conditional:
+  - crn

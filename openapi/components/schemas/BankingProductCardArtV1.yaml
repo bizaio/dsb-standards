@@ -1,0 +1,12 @@
+properties:
+  imageUri:
+    description: >-
+      Link to a PNG, JPG or GIF image with proportions defined by ISO 7810 ID-1
+      and width no greater than 512 pixels
+    type: string
+    x-cds-type: URIString
+  title:
+    description: Display label for the specific image
+    type: string
+required:
+  - imageUri

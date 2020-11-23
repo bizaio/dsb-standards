@@ -1,0 +1,26 @@
+get:
+  description: >-
+    Obtain detailed information on a single product offered openly to the
+    market.
+
+
+    NOTE: This version must be implemented by **February 2021**
+
+
+    Obsolete versions: [v1](includes/obsolete/get-product-detail-v1.html)
+    [v2](includes/obsolete/get-product-detail-v2.html)
+  operationId: getProductDetail
+  parameters:
+    - $ref: ../components/parameters/PathProductId.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/GetProductDetail.yaml
+  summary: Get Product Detail
+  security: []
+  tags:
+    - Banking
+    - Banking Products
+    - Products
+  x-version: '3'

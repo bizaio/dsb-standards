@@ -1,0 +1,39 @@
+properties:
+  accountNumber:
+    description: Account Targeted for payment
+    type: string
+  bankAddress:
+    $ref: ./BankingInternationalPayeeBankDetailsBankAddressV1.yaml
+  beneficiaryBankBIC:
+    description: >-
+      Swift bank code.  Aligns with standard [ISO
+      9362](https://www.iso.org/standard/60390.html)
+    type: string
+    x-cds-type: ExternalRef
+  chipNumber:
+    description: Number for the Clearing House Interbank Payments System
+    type: string
+  country:
+    description: >-
+      Country of the recipient institution. A valid [ISO 3166
+      Alpha-3](https://www.iso.org/iso-3166-country-codes.html) country code
+    type: string
+    x-cds-type: ExternalRef
+  fedWireNumber:
+    description: Number for Fedwire payment (Federal Reserve Wire Network)
+    type: string
+  legalEntityIdentifier:
+    description: >-
+      The legal entity identifier (LEI) for the beneficiary.  Aligns with [ISO
+      17442](https://www.iso.org/standard/59771.html)
+    type: string
+    x-cds-type: ExternalRef
+  routingNumber:
+    description: International bank routing number
+    type: string
+  sortCode:
+    description: Sort code used for account identification in some jurisdictions
+    type: string
+required:
+  - accountNumber
+  - country

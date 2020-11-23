@@ -1,0 +1,23 @@
+properties:
+  data:
+    type: object
+    properties:
+      products:
+        description: >-
+          The list of products returned.  If the filter results in an empty set then
+          this array may have no records
+        items:
+          $ref: ../schemas/BankingProductV3.yaml
+        type: array
+    required:
+      - products
+  links:
+    $ref: ../schemas/LinksPaginatedV1.yaml
+  meta:
+    $ref: ../schemas/MetaPaginatedV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object
+

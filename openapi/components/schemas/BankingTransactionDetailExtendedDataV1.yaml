@@ -1,0 +1,23 @@
+properties:
+  extensionUType:
+    description: Optional extended data provided specific to transaction originated via NPP
+    enum:
+      - x2p101Payload
+    type: string
+  payee:
+    description: >-
+      Label of the target PayID.  Mandatory for an outbound payment. The name
+      assigned to the BSB/Account Number or PayID (by the owner of the PayID)
+    type: string
+  payer:
+    description: Label of the originating payer. Mandatory for inbound payment
+    type: string
+  service:
+    description: 'Identifier of the applicable overlay service. Valid values are: X2P1.01'
+    enum:
+      - X2P1.01
+    type: string
+  x2p101Payload:
+    $ref: ./BankingTransactionDetailExtendedDataX2P101PayloadV1.yaml
+required:
+  - service

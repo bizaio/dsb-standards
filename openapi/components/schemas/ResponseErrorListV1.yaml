@@ -1,0 +1,8 @@
+properties:
+  errors:
+    items:
+      $ref: ./ErrorV1.yaml
+    type: array
+required:
+  - errors
+type: object

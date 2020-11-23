@@ -1,0 +1,30 @@
+properties:
+  lodgementDate:
+    description: The lodgement date of the original deposit
+    type: string
+    x-cds-type: DateString
+  maturityAmount:
+    description: >-
+      Amount to be paid upon maturity. If absent it implies the amount to paid
+      is variable and cannot currently be calculated
+    type: string
+    x-cds-type: AmountString
+  maturityCurrency:
+    description: If absent assumes AUD
+    type: string
+    x-cds-type: CurrencyString
+  maturityDate:
+    description: Maturity date for the term deposit
+    type: string
+    x-cds-type: DateString
+  maturityInstructions:
+    description: Current instructions on action to be taken at maturity
+    enum:
+      - ROLLED_OVER
+      - PAID_OUT_AT_MATURITY
+    type: string
+required:
+  - lodgementDate
+  - maturityDate
+  - maturityInstructions
+type: object

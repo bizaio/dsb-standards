@@ -1,0 +1,15 @@
+get:
+  description: Obtain a health check status for the implementation
+  operationId: getStatus
+  parameters:
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+  responses:
+    200:
+      $ref: ../components/responses/GetStatus.yaml
+  summary: Get Status
+  security: []
+  tags:
+    - Common
+    - Discovery
+  x-version: '1'

@@ -1,0 +1,9 @@
+description: >-
+    ID of the transaction obtained from a previous call to one of the other
+    transaction end points
+in: path
+name: transactionId
+required: true
+schema:
+  type: string
+x-cds-type: ASCIIString

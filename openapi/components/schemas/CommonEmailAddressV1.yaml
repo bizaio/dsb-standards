@@ -1,0 +1,25 @@
+properties:
+  address:
+    description: >-
+      A correctly formatted email address, as defined by the addr_spec format in
+      [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt)
+    type: string
+    x-cds-type: ExternalRef
+  isPreferred:
+    description: >-
+      May be true for one and only one email record in the collection. Denotes
+      the default email address
+    type: boolean
+    x-cds-type: Boolean
+  purpose:
+    description: 'The purpose for the email, as specified by the customer (Enumeration)'
+    enum:
+      - WORK
+      - HOME
+      - OTHER
+      - UNSPECIFIED
+    type: string
+required:
+  - address
+  - purpose
+type: object

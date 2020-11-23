@@ -1,0 +1,14 @@
+description: Number of API calls in each performance tier over time
+properties:
+  currentDay:
+    description: API call counts for current day
+    type: number
+  previousDays:
+    description: API call counts for previous days. The first element indicates yesterday and so on. A maximum of seven entries is required if available
+    items:
+      type: number
+    type: array
+x-conditional:
+  - currentDay
+  - previousDays
+type: object

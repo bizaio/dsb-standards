@@ -1,0 +1,14 @@
+description: Number of calls resulting in error due to server execution over time
+properties:
+  currentDay:
+    description: Number of errors for current day
+    type: number
+  previousDays:
+    description: Number of errors for previous days. The first element indicates yesterday and so on. A maximum of seven entries is required if available
+    items:
+      type: number
+    type: array
+x-conditional:
+  - currentDay
+  - previousDays
+type: object

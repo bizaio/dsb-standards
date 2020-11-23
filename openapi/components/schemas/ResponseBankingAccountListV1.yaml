@@ -1,0 +1,22 @@
+properties:
+  data:
+    type: object
+    properties:
+      accounts:
+        description: >-
+          The list of accounts returned. If the filter results in an empty set then
+          this array may have no records
+        items:
+          $ref: ./BankingAccountV1.yaml
+        type: array
+    required:
+      - accounts
+  links:
+    $ref: ./LinksPaginatedV1.yaml
+  meta:
+    $ref: ./MetaPaginatedV1.yaml
+required:
+  - data
+  - links
+  - meta
+type: object

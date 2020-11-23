@@ -1,0 +1,10 @@
+description: >-
+  ID of the account to get scheduled payments for. Must have previously
+  been returned by one of the account list end points. The account
+  specified is the source account for the payment
+in: path
+name: accountId
+required: true
+schema:
+  type: string
+  x-cds-type: ASCIIString

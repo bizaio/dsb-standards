@@ -1,0 +1,22 @@
+get:
+  description: >-
+    Obtain basic information on the customer that has authorised the current
+    session
+  operationId: getCustomer
+  parameters:
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/GetCustomer.yaml
+  summary: Get Customer
+  tags:
+    - Common
+    - Customer
+  security:
+    - CDRAuth: ['common:customer.basic:read']
+  x-version: '1'

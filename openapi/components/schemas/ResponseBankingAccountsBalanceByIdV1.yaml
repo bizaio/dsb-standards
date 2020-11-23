@@ -1,0 +1,10 @@
+properties:
+  data:
+    $ref: ./BankingBalanceV1.yaml
+  links:
+    $ref: ./LinksV1.yaml
+  meta:
+    $ref: ./MetaV1.yaml
+required:
+  - data
+  - links

@@ -1,0 +1,9 @@
+properties:
+  bankDetails:
+    $ref: ./BankingInternationalPayeeBankDetailsV1.yaml
+  beneficiaryDetails:
+    $ref: ./BankingInternationalPayeeBeneficiaryDetailsV1.yaml
+required:
+  - bankDetails
+  - beneficiaryDetails
+type: object

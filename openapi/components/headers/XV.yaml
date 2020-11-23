@@ -1,0 +1,5 @@
+description: >-
+  The [version](#response-headers) of the API end point that the data
+  holder has responded with.
+schema:
+  type: string

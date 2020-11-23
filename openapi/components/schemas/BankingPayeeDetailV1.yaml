@@ -1,0 +1,23 @@
+allOf:
+  - $ref: ./BankingPayeeV1.yaml
+  - properties:
+      biller:
+        $ref: ./BankingBillerPayeeV1.yaml
+      domestic:
+        $ref: ./BankingDomesticPayeeV1.yaml
+      international:
+        $ref: ./BankingInternationalPayeeV1.yaml
+      payeeUType:
+        description: Type of object included that describes the payee in detail
+        enum:
+          - domestic
+          - biller
+          - international
+        type: string
+    required:
+      - payeeUType
+    type: object
+    x-conditional:
+      - domestic
+      - biller
+      - international

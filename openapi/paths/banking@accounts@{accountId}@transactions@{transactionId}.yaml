@@ -1,0 +1,22 @@
+get:
+  description: Obtain detailed information on a transaction for a specific account
+  operationId: getTransactionDetail
+  parameters:
+    - $ref: ../components/parameters/PathAccountId.yaml
+    - $ref: ../components/parameters/PathTransactionId.yaml
+    - $ref: ../components/parameters/HeaderXV.yaml
+    - $ref: ../components/parameters/HeaderXMinV.yaml
+    - $ref: ../components/parameters/HeaderXFapiInteractionId.yaml
+    - $ref: ../components/parameters/HeaderXFAPIAuthDate.yaml
+    - $ref: ../components/parameters/HeaderXFAPICustomerIPAddress.yaml
+    - $ref: ../components/parameters/HeaderXCDSClientHeaders.yaml
+  responses:
+    '200':
+      $ref: ../components/responses/GetTransactionDetail.yaml
+  summary: Get Transaction Detail
+  tags:
+    - Accounts
+    - Banking
+  security:
+    - CDRAuth: ['bank:transactions:read']
+  x-version: '1'

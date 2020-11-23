@@ -1,0 +1,14 @@
+description: Maximum record transactions per second over time
+properties:
+  currentDay:
+    description: Peak TPS for current day
+    type: number
+  previousDays:
+    description: Peak TPS for previous days. The first element indicates yesterday
+      and so on. A maximum of seven entries is required if available
+    items:
+      type: number
+    type: array
+x-conditional:
+  - currentDay
+  - previousDays
